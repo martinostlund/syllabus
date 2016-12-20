@@ -37,3 +37,6 @@ Collaboration through the web.
 Electronic human rights
 The web and it role in development countries
 The web as a university - The ability to shape your own knowledge
+
+### Web economy
+Blockchain...
