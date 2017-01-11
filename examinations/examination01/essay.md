@@ -46,6 +46,7 @@ In this assignment you are pretty free to choose your own subject but we have so
 * The Blockchain and trust as software
 * Etherium and smart contracts in relationsship to traditional web development
 * Etherium as the worlds first global computer - What to expect?
+* Conversation as a platform / Chat as an interface
 
 
 ## Examination
