@@ -43,9 +43,10 @@ In this assignment you are pretty free to choose your own subject but we have so
 * The web as a university - The ability to shape your own knowledge
 
 ### Disruptive technologies
-* The Blockchain
+* The Blockchain and trust as software
 * Etherium and smart contracts in relationsship to traditional web development
-* Etherium as the worlds first global computer
+* Etherium as the worlds first global computer - What to expect?
+
 
 ## Examination
 Your written essay will go through a peer-review done by one of your class mates. This means that you also will get an essay to read and to give a peer-review. This is a part of the examination and you should send your peer-review comments to your class mate (as feedback) and also post your comments to the examiner . The examiner will go through both the peer-reviews and the written essay when grading your assignment. The grade is A to F.
