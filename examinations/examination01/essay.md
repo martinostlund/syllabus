@@ -44,10 +44,19 @@ In this assignment you are pretty free to choose your own subject but we have so
 
 ### Disruptive technologies
 * The Blockchain and trust as software
-* Etherium and smart contracts in relationsship to traditional web development
+* Etherium and smart contracts in relationship to traditional web development
 * Etherium as the worlds first global computer - What to expect?
 * Conversation as a platform / Chat as an interface
 
 
 ## Examination
-Your written essay will go through a peer-review done by one of your class mates. This means that you also will get an essay to read and to give a peer-review. This is a part of the examination and you should send your peer-review comments to your class mate (as feedback) and also post your comments to the examiner . The examiner will go through both the peer-reviews and the written essay when grading your assignment. The grade is A to F.
+Your written essay will go through a peer-review done by one of your class mates. This means that you also will get an essay to read and to give a peer-review. This is a part of the examination and you should send your peer-review comments to your class mate (as feedback) and also post your comments to the examiner . The examiner will go through both the peer-reviews and the written essay when grading your assignment. The grade is A to F following the following criteria:
+
+A: The student has clearly gaining knowledge of her/his subject. The reflections have a solid reference back to high quality articles. The language in the essay is perfect and the essay is a interesting reading where the student submits her/his own thoughts in a grounded way. The student follow the directions regarding the formal presentation of the essay. The student is giving valuable feedback to it´s peer-review where the student clearly show understanding of it´s peers work.
+
+C: The student show knowledge of her/his subject. The reflections have a solid reference back to articles. The language in the essay is good where the student submits her/his own thoughts in grounded way. The student follow the directions regarding the formal presentation of the essay. The student is giving valuable feedback to it´s peer-review where the student show some understanding of it´s peers work.
+
+E: The student show some of her/his subject. The reflections have a solid reference back to articles. The language in the essay is tolerable where the student submits her/his own thoughts in grounded way. The student follow the directions regarding the formal presentation of the essay. The student is giving feedback to it´s peer-review where the student show some understanding of it´s peers work.
+
+Fx: The essay is not up to the standards for passing but could be complemented.
+F: The essay is not written or not close to passing and the student should redo her/his work
