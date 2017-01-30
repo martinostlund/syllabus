@@ -76,47 +76,256 @@
             </section>
 
 
-            <section>
-                <!-- Syllabus -->
+             <section data-markdown>
+                      <script type="text/template">
+                        ## Content
+                        * Web APIs - What, why
+                          * Definition
+                          * API-driven development
+                        * Mashups
+                        * ReST-ful Web APIs
+                      </script>
+              </section>
+              <section>
                 <section data-markdown>
                         <script type="text/template">
-
+                          ## Web API - What do we mean?
+                          * Server-side, Machine-to- Machine
+                          * HTTP-based Application Programming Interface
+                            * URL requests
+                            * JSON, XML, YML
+                          * UI for data
                         </script>
                 </section>
 
-                <!-- Goals -->
-                <section data-markdown>
+                <section data-markdown class="center">
                         <script type="text/template">
+                          ## Starting point
+                          ![API](../images/api01.png)
+                        </script>
+                </section>
 
+                <section data-markdown class="center">
+                        <script type="text/template" >
+                          ## Not just browsers
+                          ![API](../images/api02.png)
+                        </script>
+                </section>
+
+
+                <section data-markdown class="center">
+                        <script type="text/template">
+                          ## Web API
+                          ![API](../images/api03.png)
+                        </script>
+                </section>
+
+                <section data-markdown class="center">
+                        <script type="text/template">
+                          ## API-driven development
+                          ![API](../images/api04.png)
+                        </script>
+                </section>
+
+                <section data-markdown class="center">
+                        <script type="text/template">
+                          ## Server-to-server
+                          ![API](../images/api06.png)
+                        </script>
+                </section>
+
+                <section data-markdown class="center">
+                        <script type="text/template">
+                          ## Monolitic web app
+                          ![API](../images/monolitic.png)
+                        </script>
+                </section>
+
+
+                <section data-markdown class="center">
+                        <script type="text/template">
+                          ## Microservices
+                          ![API](../images/api05.png)
                         </script>
                 </section>
 
             </section>
 
+            <section>
+              <section data-markdown>
+                      <script type="text/template">
+                        ## Web APIs - Pros
+                        * Platform independence
+                        * SOC, decoupled applications
+                        * Flexability, changeability
+                        * Simplyfy complex things
+                        * Inovation
+                        * Integration, system-to-system
+                        * Marketing, usage of service
+                        * Transparent, Open Data
+                        * ...
+                      </script>
+              </section>
+              <section data-markdown>
+                      <script type="text/template">
+                        ## Web APIs - Cons
+                        * More development
+                        * Backward compability, maintenance
+                        * Security? Data leakage...
+                        * Overkill?
+                        * Performance?
+                        * ...
+                      </script>
+              </section>
+            </section>
 
-            <section data-markdown>
+            <section>
+              <section data-markdown>
+                  <script type="text/template">
+                    ## Mashup
+                    A web application that merge information from different independent sources to:
+                    * provide extra value
+                    * analyze data on new ways
+                    <div class="center">
+                      <img src="../images/mashup.png" width="80%" alt="">
+                    </div>
+
+
+                  </script>
+              </section>
+              <section data-background-iframe="https://www.flightradar24.com/60,15/6">
+              </section>
+            </section>
+
+            <section>
+              <section data-markdown class="center">
+                      <script type="text/template">
+                        ## So lets code the thing...
+                        ![code](../images/start_dev.gif)
+
+                      </script>
+              </section>
+              <section data-markdown class="">
+                      <script type="text/template">
+                        ## How do to build Web APIs
+                        * Hard to change a published (and used) API
+                        * Define domain semantics
+                          * What are we trying to describe
+                          * Find your "models"
+                        * Choose Architectural style
+                          * URI CRUD-based
+                          * Event-driven
+                          * Hypermedia API / ReSTful
+
+                      </script>
+              </section>
+            </section>
+            <section>
+              <section data-markdown class="">
+                      <script type="text/template">
+                        ## ReST
+                        Representational State Transfer
+
+                        Roy Fielding
+
+                        <img src="../images/roy.jpg" width="20%" alt="">
+
+                        ReST is a networked, hypermedia architectural style - Typified by the web
+                      </script>
+              </section>
+
+              <section data-markdown class="">
+                      <script type="text/template">
+                        ## ReST constraints
+                        * Client-Server
+                        * Stateless server
+                        * Cacheable
+                        * Layered System
+                          * A client don´t know if connected to end-server
+                          * Loadbalancing, shared cache...
+                        * Uniform interface
+                          * Identification of resources
+                          * Manipulations through representations
+                          * Self-descripted messages
+                          * Hypermedia as the engine of application state (HATEOAS)
+                        * Code-on-demand (optional)
+                      </script>
+              </section>
+              <section data-markdown class="">
+                      <script type="text/template">
+                        ## Identification of resources
+                        * ROA (Resource-oriented architecture)
+                        * URI/URL for identifining a resource
+                            * http://www.example.com/users/
+                            * http://www.example.com/users/thajo
+                            * http://www.example.com/users/thajo/projects/SOS
+                            * http://www.example.com/HGF653/1827Y/TREF6?filter=email,name,city
+                      </script>
+              </section>
+              <section data-markdown class="">
+                      <script type="text/template">
+                        ## Manipulations through representations
+                        * HTTP have content negotiation
+                          * Accept: application/json
+                          * Content-Type
+                        * Multiple representation of a resource
+                          * JSON, XML, HTML
+                        * application/vnd.lnu.thajo-v2+json
+
+                      </script>
+              </section>
+
+              <section data-markdown class="">
+                      <script type="text/template">
+                        ## Self-descripted messages
+                        * HTTP verbs/methods
+                        * HTTP Status codes
+
+                        | Verbs        | Action           | Response Code |
+                        | :------------- |:-------------| :-----|
+                        | GET     | read-only, safe, idempotent | 200, 401, 404...|
+                        | POST     | unsafe, non-idempotent      | 201, 400, 401 |
+                        | PUT | unsafe, idempotent     |    200, 400, 401 |
+                        | DELETE | unsafe, idempotent     |    200, 204, 404 |
+
+                        * http://www.example.com/users/create
+                        * http://www.example.com/editUser
+                      </script>
+              </section>
+
+              <section data-markdown class="">
                     <script type="text/template">
+                      ## HATEOAS
+                      * Hypermedia and application state
+                      * Browsing the API between states
+                        * State machine
+
+                      “ The name ‘Representational State Transfer’ is intended to evoke an image of how a well-designed Web application behaves: a network of Web pages (a virtual state-machine), where the user progresses through the application by selecting links (state transitions), resulting in the next page (representing the next state of the application) being transferred to the user and rendered for their use.”
 
                     </script>
+              </section>
+              <section data-markdown class="">
+                    <script type="text/template">
+                      ## Example
+                      ![Yeah](../images/github_ui.png)
+
+                    </script>
+              </section>
+              <section data-markdown class="">
+                    <script type="text/template">
+                      ## Jump to states by clicking links
+                      ![State](../state.png)
+
+                    </script>
+              </section>
+              <section data-markdown class="">
+                    <script type="text/template">
+                      ## https://api.github.com/
+                      ![State](../gh_links.png)
+
+                    </script>
+              </section>
             </section>
-
-            <!-- Tools -->
-            <section data-markdown>
-                <script type="text/template">
-
-                </script>
-            </section>
-
-
-            <!-- Info -->
-            <section data-markdown>
-                <script type="text/template">
-
-                </script>
-            </section>
-            
-          </section>
-
         </div>
     </div>
 
