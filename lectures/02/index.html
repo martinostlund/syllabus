@@ -231,6 +231,7 @@
                         <img src="../images/roy.jpg" width="20%" alt="">
 
                         ReST is a networked, hypermedia architectural style - Typified by the web
+                        > ReST demonstrates that the web is an application platform
                       </script>
               </section>
 
@@ -283,13 +284,14 @@
 
                         | Verbs        | Action           | Response Code |
                         | :------------- |:-------------| :-----|
-                        | GET     | read-only, safe, idempotent | 200, 401, 404...|
-                        | POST     | unsafe, non-idempotent      | 201, 400, 401 |
-                        | PUT | unsafe, idempotent     |    200, 400, 401 |
-                        | DELETE | unsafe, idempotent     |    200, 204, 404 |
+                        | GET     | read-only, safe, idempotent | 200, 404, 500|
+                        | POST     | unsafe, non-idempotent      | 201, 400, 500 |
+                        | PUT | unsafe, idempotent     | 200, 204, 404, 409, 500 |
+                        | DELETE | unsafe, idempotent     | 204, 404, 405, 503 |
 
                         * http://www.example.com/users/create
                         * http://www.example.com/editUser
+                        * CRUD-service
                       </script>
               </section>
 
@@ -314,15 +316,77 @@
               <section data-markdown class="">
                     <script type="text/template">
                       ## Jump to states by clicking links
-                      ![State](../state.png)
+                      ![State](../images/state.png)
 
                     </script>
               </section>
               <section data-markdown class="">
                     <script type="text/template">
                       ## https://api.github.com/
-                      ![State](../gh_links.png)
+                      ![State](../images/gh_links.png)
 
+                      A transferred representation includes links that reflect the state of the application
+                    </script>
+              </section>
+              <section class="center">
+
+                      <img src="../images/problem.gif" alt="">
+
+                      <p class="fragment fade-up">
+                        <ul>
+                          <li>
+                            No standardized responses
+                            <ul>
+                              <li>You make your own building on your own data model</li>
+                            </ul>
+                          </li>
+                          <li>
+                            How to handle linking in JSON?
+                            <ul>
+                              <li>XML, HTML, Atom</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </p>
+
+              </section>
+              <section data-markdown class="">
+                    <script type="text/template">
+                      ## How to use JSON for HATEOAS
+                      * HAL - Hypertext Application Language
+                        * http://stateless.co/hal_specification.html
+                      * JSON API
+                        * http://jsonapi.org/
+                      * JSON-LD (+ HYDRA)
+                        * http://json-ld.org/
+                      * Collection+JSON
+                        * http://amundsen.com/media-types/collection/
+                      * Siren
+                        * https://github.com/kevinswiber/siren
+
+                    </script>
+              </section>
+              <section data-markdown class="">
+                    <script type="text/template">
+                      ## HAL - Example
+                      <img src="../images/HAL.png" alt="">
+                    </script>
+              </section>
+
+            </section>
+            <section>
+              <section data-markdown class="center">
+                  <script type="text/template">
+                    ## Examination assignment 2
+                    https://coursepress.lnu.se/kurs/the-web-as-an-application-platform/examination-2/
+                  </script>
+                  <script type="text/template">
+                      ## Next time
+                      * A more pragmatic view
+                        * API keys
+                        * Security
+                        * Filtering
+                        * ...
                     </script>
               </section>
             </section>
