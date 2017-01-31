@@ -16,6 +16,7 @@ We will emit obvious requirements like error handling, security and so on. Of co
 * The API should require a API-key for unauthorized users (create this in your seed-script)
 * In your examination repository you should provide a [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) collection. The examiner should be able to load this into the POSTMAN application and test your API without any further configuration.
 * No visual UI! Just the API.
+* We recommend writing your API in Node.js
 * Of course - Answer the questions below
 
 ## Our suggestion for those without own ideas
@@ -46,5 +47,5 @@ This examination is a hand-in assignment. You will need to defend your design de
 
 ## Tips
 * Start by making a plan how to solve the assignment. What do you have to do. What steps do you have to take. What do you need to know and learn? Plan your work! Use GitHUb or a other tool for this.
-* Start with your models, create them and a seed-script that fill your storage with some data when starting the application.
+* Start with your resources/models. Create them and write a seed-script that fill your storage with some data to play with when testing your API.
 * Don´t spend time on over-doing validation rules. In a real scenario we should but in this assignment the API is the most important.

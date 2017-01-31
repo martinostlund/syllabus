@@ -79,10 +79,10 @@
              <section data-markdown>
                       <script type="text/template">
                         ## Content
-                        * Web APIs - What, why
+                        * Web APIs - What, why, how
                           * Definition
                           * API-driven development
-                        * Mashups
+                          * Mashups
                         * ReST-ful Web APIs
                       </script>
               </section>
@@ -90,11 +90,31 @@
                 <section data-markdown>
                         <script type="text/template">
                           ## Web API - What do we mean?
-                          * Server-side, Machine-to- Machine
+
+                          * Server-side, Machine-to-Machine
                           * HTTP-based Application Programming Interface
                             * URL requests
-                            * JSON, XML, YML
+                            * JSON, XML, YML, ...
                           * UI for data
+                        </script>
+                </section>
+
+                <section data-markdown class="center">
+                        <script type="text/template">
+                          ## Feed us!
+                          ```
+                          GET http://api.sr.se/api/v2/scheduledepisodes?channelid=163&format=json
+                          ```
+                          ![data](../images/data-json.png)
+                        </script>
+                </section>
+
+                <section data-markdown class="center">
+                        <script type="text/template">
+                          ## Why?
+
+                          <img src="../images/why.gif" alt="">
+
                         </script>
                 </section>
 
@@ -107,19 +127,21 @@
 
                 <section data-markdown class="center">
                         <script type="text/template" >
-                          ## Not just browsers
+                          ## Not just browser applications
                           ![API](../images/api02.png)
+                          ### Shared data over multiple application
                         </script>
                 </section>
 
-
+<!--
                 <section data-markdown class="center">
                         <script type="text/template">
                           ## Web API
                           ![API](../images/api03.png)
+                          #### API-driven development
                         </script>
                 </section>
-
+-->
                 <section data-markdown class="center">
                         <script type="text/template">
                           ## API-driven development
@@ -149,58 +171,92 @@
                         </script>
                 </section>
 
-            </section>
-
-            <section>
-              <section data-markdown>
-                      <script type="text/template">
-                        ## Web APIs - Pros
-                        * Platform independence
-                        * SOC, decoupled applications
-                        * Flexability, changeability
-                        * Simplyfy complex things
-                        * Inovation
-                        * Integration, system-to-system
-                        * Marketing, usage of service
-                        * Transparent, Open Data
-                        * ...
-                      </script>
               </section>
-              <section data-markdown>
-                      <script type="text/template">
-                        ## Web APIs - Cons
-                        * More development
-                        * Backward compability, maintenance
-                        * Security? Data leakage...
-                        * Overkill?
-                        * Performance?
-                        * ...
-                      </script>
-              </section>
-            </section>
+              <section>
 
-            <section>
-              <section data-markdown>
+                <section data-markdown class="center">
+
+                        <script type="text/template">
+                          ## History
+                          * CORBA/DCOM
+                          * RPC (Remote Procedure Call)
+                          * Web Service (WS-*)
+                          * ReSTful Web APIs
+                        </script>
+                </section>
+
+                <section class="stretch" data-background-image="../images/ws_overview.png">
+
+                </section>
+
+                <section class="stretch" data-background-image="../images/WSDL.png">
+
+                </section>
+
+                <section data-markdown class="stretch">
                   <script type="text/template">
-                    ## Mashup
-                    A web application that merge information from different independent sources to:
-                    * provide extra value
-                    * analyze data on new ways
-                    <div class="center">
-                      <img src="../images/mashup.png" width="80%" alt="">
-                    </div>
+                        <img width="45%" src="../images/soap_request.png" alt="">
+
+                        vs.
+
+                        ```
+                          GET http://www.example.org/stockprice/IBM.xml
+                          ```
+                    </script>
+                </section>
 
 
+
+                <section data-markdown class="center">
+                  <script type="text/template">
+                    ## Types of APIs
+                    * Public
+                    * Partner
+                    * Private, internal
                   </script>
+                </section>
+
+            </section>
+
+            <section>
+              <section>
+                <h2>Web APIs - Pros</h2>
+                <ul style="width: 45%; float: left">
+                  <li>Platform independence</li>
+                  <li>SOC, decoupled applications</li>
+                  <li>Flexability, changeability</li>
+                  <li>Simplyfy complex things</li>
+                  <li>Inovation, mashups</li>
+                  <li>Integration, system-to-system</li>
+                  <li>Marketing, usage of service</li>
+                  <li>Transparent, Open Data</li>
+                </ul>
+                <img src="../images/success.jpg" style="float:left" alt="">
+
+
               </section>
               <section data-background-iframe="https://www.flightradar24.com/60,15/6">
+              </section>
+              <section>
+                <h2>Web APIs - Cons</h2>
+                <ul style="width: 55%; float: left">
+                  <li>More development</li>
+                  <li>Backward compability, maintenance</li>
+                  <li>Security? Data leakage...</li>
+                  <li>Overkill?</li>
+                  <li>Performance?</li>
+                  <li>...?</li>
+
+                </ul>
+                <img src="../images/fail.jpg" width style="float:left" alt="">
+
               </section>
             </section>
 
             <section>
               <section data-markdown class="center">
                       <script type="text/template">
-                        ## So lets code the thing...
+                        ## How do we do it???
                         ![code](../images/start_dev.gif)
 
                       </script>
@@ -235,6 +291,8 @@
                       </script>
               </section>
 
+
+
               <section data-markdown class="">
                       <script type="text/template">
                         ## ReST constraints
@@ -256,11 +314,14 @@
                       <script type="text/template">
                         ## Identification of resources
                         * ROA (Resource-oriented architecture)
+                        * A resource is "a thing"
                         * URI/URL for identifining a resource
-                            * http://www.example.com/users/
-                            * http://www.example.com/users/thajo
-                            * http://www.example.com/users/thajo/projects/SOS
+                            * https://www.example.com/users/
+                            * https://www.example.com/users/thajo
+                            * https://www.example.com/users/thajo/projects/SOS
                             * http://www.example.com/HGF653/1827Y/TREF6?filter=email,name,city
+                            * http://www.example.com/getUser?id=123
+                        * Pretty URLs is nice...just nice.
                       </script>
               </section>
               <section data-markdown class="">
@@ -363,6 +424,8 @@
                         * http://amundsen.com/media-types/collection/
                       * Siren
                         * https://github.com/kevinswiber/siren
+                      * JSON Home
+                        * https://tools.ietf.org/html/draft-nottingham-json-home-05
 
                     </script>
               </section>
@@ -371,6 +434,13 @@
                       ## HAL - Example
                       <img src="../images/HAL.png" alt="">
                     </script>
+              </section>
+              <section>
+                <h2>Pragmatic ReST or ReSTafarian?</h2>
+                <div class="center">
+                  <img width="30%" src="../images/restafarian.jpg" alt="">
+                </div>
+
               </section>
 
             </section>
