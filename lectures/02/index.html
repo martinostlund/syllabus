@@ -327,12 +327,14 @@
               <section data-markdown class="">
                       <script type="text/template">
                         ## Manipulations through representations
+                        * An instance of a resource is a representation
+                        * Multiple representation of a resource
+                          * application/json, application/xml, text/html
                         * HTTP have content negotiation
                           * Accept: application/json
-                          * Content-Type
-                        * Multiple representation of a resource
-                          * JSON, XML, HTML
+                          * Content-Type: text/html
                         * application/vnd.lnu.thajo-v2+json
+                          * Custom media-types
 
                       </script>
               </section>
@@ -350,9 +352,6 @@
                         | PUT | unsafe, idempotent     | 200, 204, 404, 409, 500 |
                         | DELETE | unsafe, idempotent     | 204, 404, 405, 503 |
 
-                        * http://www.example.com/users/create
-                        * http://www.example.com/editUser
-                        * CRUD-service
                       </script>
               </section>
 
@@ -389,6 +388,14 @@
                       A transferred representation includes links that reflect the state of the application
                     </script>
               </section>
+              <section data-markdown class="">
+                    <script type="text/template">
+                      ## Only states that make sense!
+                      <img src="../images/statemashine.png" width="50%" alt="">
+
+                      Stolen from: https://speakerdeck.com/stilkov/rest-i-dont-think-it-means-what-you-think-it-does
+                    </script>
+              </section>
               <section class="center">
 
                       <img src="../images/problem.gif" alt="">
@@ -399,6 +406,12 @@
                             No standardized responses
                             <ul>
                               <li>You make your own building on your own data model</li>
+                            </ul>
+                          </li>
+                          <li>
+                            How to send data?
+                            <ul>
+                              <li>I must have a documentation for each POST and PUT?</li>
                             </ul>
                           </li>
                           <li>
@@ -432,12 +445,13 @@
               <section data-markdown class="">
                     <script type="text/template">
                       ## HAL - Example
-                      <img src="../images/HAL.png" alt="">
+                      <img width="62%" src="../images/HAL.png" alt="">
                     </script>
               </section>
               <section>
-                <h2>Pragmatic ReST or ReSTafarian?</h2>
                 <div class="center">
+                  <h2>Pragmatic ReST or ReSTafarian?</h2>
+
                   <img width="30%" src="../images/restafarian.jpg" alt="">
                 </div>
 
@@ -450,6 +464,10 @@
                     ## Examination assignment 2
                     https://coursepress.lnu.se/kurs/the-web-as-an-application-platform/examination-2/
                   </script>
+
+              </section>
+              <section data-markdown class="center">
+
                   <script type="text/template">
                       ## Next time
                       * A more pragmatic view
@@ -458,6 +476,13 @@
                         * Filtering
                         * ...
                     </script>
+              </section>
+              <section data-markdown class="center">
+
+                  <script type="text/template">
+                    ## BYE!
+                    ![beatles](../images/bye-beatles.gif)
+                  </script>
               </section>
             </section>
         </div>
