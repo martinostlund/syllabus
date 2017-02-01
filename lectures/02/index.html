@@ -82,8 +82,7 @@
                         * Web APIs - What, why, how
                           * Definition
                           * API-driven development
-                          * Mashups
-                        * ReST-ful Web APIs
+                        * ReSTful Web APIs
                       </script>
               </section>
               <section>
@@ -91,11 +90,17 @@
                         <script type="text/template">
                           ## Web API - What do we mean?
 
-                          * Server-side, Machine-to-Machine
+                          * Server-side, service interface
                           * HTTP-based Application Programming Interface
                             * URL requests
                             * JSON, XML, YML, ...
                           * UI for data
+
+                          <aside class="notes">
+                           not Web API against browser
+                           not ASP.NET Web API
+                           UI not good choice of word
+                         </aside>
                         </script>
                 </section>
 
@@ -106,6 +111,12 @@
                           GET http://api.sr.se/api/v2/scheduledepisodes?channelid=163&format=json
                           ```
                           ![data](../images/data-json.png)
+
+                          <aside class="notes">
+                           webbutvecklarprespektiv
+
+                           affärsperspektiv, organisationsperspektiv o.s.v.
+                         </aside>
                         </script>
                 </section>
 
@@ -179,7 +190,6 @@
                         <script type="text/template">
                           ## History
                           * CORBA/DCOM
-                          * RPC (Remote Procedure Call)
                           * Web Service (WS-*)
                           * ReSTful Web APIs
                         </script>
@@ -193,15 +203,15 @@
 
                 </section>
 
-                <section data-markdown class="stretch">
+                <section data-markdown class="center">
                   <script type="text/template">
                         <img width="45%" src="../images/soap_request.png" alt="">
-
-                        vs.
+                        <p class="fragment">
 
                         ```
                           GET http://www.example.org/stockprice/IBM.xml
-                          ```
+                        ```
+                        </p>
                     </script>
                 </section>
 
@@ -210,9 +220,9 @@
                 <section data-markdown class="center">
                   <script type="text/template">
                     ## Types of APIs
-                    * Public
-                    * Partner
                     * Private, internal
+                    * Partner
+                    * Public
                   </script>
                 </section>
 
@@ -226,12 +236,15 @@
                   <li>SOC, decoupled applications</li>
                   <li>Flexability, changeability</li>
                   <li>Simplyfy complex things</li>
-                  <li>Inovation, mashups</li>
                   <li>Integration, system-to-system</li>
                   <li>Marketing, usage of service</li>
                   <li>Transparent, Open Data</li>
+                  <li>Inovation, mashups</li>
                 </ul>
-                <img src="../images/success.jpg" style="float:left" alt="">
+                <p class="fragment">
+                  <img src="../images/success.jpg" style="float:left" alt="">
+                </p>
+
 
 
               </section>
@@ -263,16 +276,16 @@
               </section>
               <section data-markdown class="">
                       <script type="text/template">
-                        ## How do to build Web APIs
+                        ## Building Web APIs
                         * Hard to change a published (and used) API
                         * Define domain semantics
                           * What are we trying to describe
-                          * Find your "models"
+                          * Find your "things"/resources/models
+                          * What should not be included in the API
                         * Choose Architectural style
                           * URI CRUD-based
-                          * Event-driven
                           * Hypermedia API / ReSTful
-
+                          * Event-driven
                       </script>
               </section>
             </section>
@@ -308,7 +321,9 @@
                           * Self-descripted messages
                           * Hypermedia as the engine of application state (HATEOAS)
                         * Code-on-demand (optional)
+
                       </script>
+
               </section>
               <section data-markdown class="">
                       <script type="text/template">
@@ -471,9 +486,10 @@
                   <script type="text/template">
                       ## Next time
                       * A more pragmatic view
-                        * API keys
-                        * Security
-                        * Filtering
+                        * Some Peer-Instruction questions
+                        * Web API keys
+                        * Web API Security
+                        * Tips and tricks
                         * ...
                     </script>
               </section>
