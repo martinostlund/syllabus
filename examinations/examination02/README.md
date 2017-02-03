@@ -8,14 +8,13 @@ We will emit obvious requirements like error handling, security and so on. Of co
 * The API should be a web API meaning working through HTTP and/or HTTPS.
 * The API should only support representations with application/json
 * The API should follow the constraints for Restful APIs
-* The API should embrace the idea of HATEOAS as good as possible even though it is more of a CRUD-service.
+* The API should embrace the idea of HATEOAS as good as possible.
 * The API should be self-descriptive and easy to browse/explore
 * The API should support CRUD operations where all data in the system should be available through API calls.
-* Unsafe HTTP methods and data about users in the system should require some kind of authentication done through the API (register users trough the API is not required - could be hardcoded into your storage).
+* Unsafe HTTP methods and data about users in the system should require some kind of authentication done through the API (you are free to choose implementation method for this).
 * The API should give some ability to register a web hook which will trigger on some, of you chosen, event.
-* The API should require a API-key for unauthorized users (create this in your seed-script)
 * In your examination repository you should provide a [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) collection. The examiner should be able to load this into the POSTMAN application and test your API without any further configuration.
-* No visual UI! Just the API.
+* No visual UI needed (you are free to do if you want).
 * We recommend writing your API in Node.js
 * Of course - Answer the questions below
 
@@ -39,11 +38,12 @@ Of course you are free to implement further feature you want in your web API.
 ## Questions
 This examination is a hand-in assignment. You will need to defend your design decisions in writing by answering the below questions. This questions should be answered in your repository *README.md*.
 
-1. How have you implemented the idea of HATEOAS in your API? Motivate your choices!
+1. How have you implemented the idea of HATEOAS in your API? Motivate your choices and how it support the idea of HATEOAS!
 2. If your solution should implement multiple representations of the resources. How would you do it?
-3. Motivate and defend your authentication solution? Why did you choose the one you did?
+3. Motivate and defend your authentication solution? Why did you choose the one you did? Pros/Cons.
 4. Explain how your web hook works.
-5. Since this is your first own web API there are probably things you would solve in an other way looking back at this assignment. Explain this.
+5. Since this is your first own web API there are probably things you would solve in an other way looking back at this assignment. Write your thoughts down.
+6. Did you do something extra besides the fundamental requirements? Explain them.
 
 ## Tips
 * Start by making a plan how to solve the assignment. What do you have to do. What steps do you have to take. What do you need to know and learn? Plan your work! Use GitHUb or a other tool for this.
