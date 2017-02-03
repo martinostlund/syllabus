@@ -31,7 +31,7 @@ The fishing club "Den svartmunnade smörbultens banne" needs an API for collecti
 * Other information: like equipment, fishing method and so on
 * A text describing the catch
 
-To do un-safe HTTP calls the API must have some kind of Authentication/Authorization. A user should be able to sign in through the API in a safe way. You are free to choose your authentication strategy. This means that you also have to keep track of users in the system. When storing users you should store the common stuff like name, email, password etc.
+To do un-safe HTTP calls the API must have some kind of Authentication/Authorization. A user should be able to sign in through the API in a safe way. You are free to choose your authentication strategy.
 
 Of course you are free to implement further feature you want in your web API.
 
