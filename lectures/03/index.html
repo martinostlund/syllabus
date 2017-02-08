@@ -75,7 +75,7 @@
                 </p>
             </section>
 
-          <section>
+
              <section data-markdown>
                       <script type="text/template">
                         ## Content
@@ -89,7 +89,6 @@
                           * Web hooks
                       </script>
               </section>
-              <section>
 
 
                 <section data-markdown>
@@ -112,15 +111,16 @@
 
                 <section data-markdown>
                         <script type="text/template">
+                          ### Authentication
+                            401 unauthorized
 
-                          * Authentication
-                            * 401 unauthorized
-                            * "You faild to log in, Please try again!"
-                          * Authorization
-                            * 403 Forbidden
-                            * "(Maybe) I know who you are but you are not allowed here. Please go away and do not bother me"
+                            "You faild to log in, Please try again!"
 
 
+                          ### Authorization
+                            403 Forbidden
+
+                            "(Maybe) I know who you are but you are not allowed here. Please go away and do not bother me"
                           <aside class="notes">
                           </aside>
                         </script>
@@ -128,7 +128,7 @@
 
                 <section data-markdown>
                         <script type="text/template">
-                          ## Strategies
+                          ## Strategies - AuthN, AuthZ
                           * Open and public! Read-only!
                           * HTTP Authentication
                           * API keys?
@@ -144,9 +144,11 @@
                 <section data-markdown>
                         <script type="text/template">
                           ## HTTP Basic authentication
-                          Simple, standard, good support. Browser compability
+
+                          Simple, standard, Supported by most technologies
+
                           ```
-                            // Header from Server
+                            // Header from Server - A challenge
                             401 Unauthorized HTTP/1.1
                             WWW-Authenticate: Basic realm="my api"
                           ```
@@ -157,7 +159,7 @@
                           ```
                           base64-encoding of username/password - not encrypted!!!
 
-                          Supported by most technologies
+                          ![basic](../images/basichttp.png)
                           <aside class="notes">
                           </aside>
                         </script>
@@ -167,13 +169,13 @@
                         <script type="text/template">
                           ## HTTP Digest authentication
                           There is "a more secure" HTTP authentication
-                          ![yeah](../images/http_digest.png)
+                          MD5 cryptographic hashing with usage of nonce values to prevent replay attacks.
+                          <div class="center">
+                            <img src="../images/http_digest.jpg" width="40%" alt="">
 
-                          but...
+                          </div>
 
-                          ![sdsd](../images/whatever.png)
-
-                          ...let´s skip that!
+                          Prevents using a storng password hashing algorithm...so...
                           <aside class="notes">
                           </aside>
                         </script>
@@ -182,10 +184,10 @@
                 <section data-markdown>
                         <script type="text/template">
                           ...let´s skip that!
+                            <div class="center">
 
-                          ![sdsd](../images/whatever.png)
-
-
+                            <img src="../images/whatever.gif" width="40%" alt="">
+                        </div>
                           <aside class="notes">
                           </aside>
                         </script>
@@ -193,28 +195,26 @@
 
                 <section data-markdown>
                         <script type="text/template">
-                          ## Token-based
+                          ## Token-based solutions
                           ![token](../images/tokenauth.png)
 
-                          Secret generated
-                          Avoid sending in URL - There are logging proxies out there
-                          Use custom header or Authorization header
-                          Time limit
+                          * Avoid sending in URL - There are logging proxies out there
+                          * Use custom header or **Authorization** header
+                          * Time limit
                         </script>
                 </section>
 
                 <section data-markdown>
                         <script type="text/template">
                           ## API keys
-
-                          ```IP84UTvzJKds1Jomx8gIbTXcEEJSUilGqpxCcmnx```
-
+                          ```
+                          IP84UTvzJKds1Jomx8gIbTXcEEJSUilGqpxCcmnx
+                          ```
                           * Authentication/Authorization?
                             * vs. username/password
                             * long-lived?
                             * Easy to make public?
                             * "API keys are not API security"
-
                           * Track how the API is beeing used
                             * Use API keys for identification and analytics
                             * Rate limit
@@ -223,13 +223,13 @@
                 </section>
 
 
-                <section data-markdown>
-                        <script type="text/template">
-                          ```
-                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
-                          ```
-                        </script>
+                <section>
+                      eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+                      eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gS
+                      MOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.
+                      5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
                 </section>
+
                 <section data-markdown>
                         <script type="text/template">
                           ## JWT
@@ -238,27 +238,29 @@
                           * JWTs are self-contained - Carry all info in it self
                             * "JSON", great language support
                             * Every one can see the info (no sensitive should be there)
-                            * In cookie?, IN bearer?
+                            * In cookie?, In Authorization-header (Bearer)?
                         </script>
                 </section>
                 <section data-markdown>
                         <script type="text/template">
                           ```
-                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
+                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+                            eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.
+                            5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
                           ```
-                          Header
-                          Payload
-                          Signature
+                          * Header
+                          * Payload
+                          * Signature
+
+                          This is JSON!
 
                         </script>
                 </section>
 
                 <section data-markdown>
                         <script type="text/template">
-                          ```
-                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
-                          ```
-                          Header
+                          ##Header
+
 
                           ```
                           {
@@ -268,46 +270,50 @@
                           ```
                           base64encode on the above will get you the first part of the JWT.
 
-                        </script>
-                </section>
-                <section data-markdown>
-                        <script type="text/template">
-                          ```
-                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
-                          ```
-                          Payload
 
-                          iss: The issuer of the token
-                          sub: The subject of the token
-                          aud: The audience of the token
-                          exp: This will probably be the registered claim most often used. This will define the expiration in NumericDate value. The expiration MUST be after the current date/time.
-                          nbf: Defines the time before which the JWT MUST NOT be accepted for processing
-                          iat: The time the JWT was issued. Can be used to determine the age of the JWT
-                          jti: Unique identifier for the JWT. Can be used to prevent the JWT from being replayed. This is helpful for a one time use token.
-
-
-                          ```
-                          {
-                            "iss": "scotch.io",
-                            "exp": 1300819380,
-                            "name": "Chris Sevilleja",
-                            "admin": true
-                          }
-                          ```
-                          base64encode on the above will get you the middle part of the JWT.
+                          **eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.**
+                          eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.
+                          5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
 
                         </script>
                 </section>
                 <section data-markdown>
                         <script type="text/template">
-                          ```
-                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
-                          ```
-                            Signature
+                            ##   Payload
+
                             ```
+                            {
+                              "iss": "lnu.se/thajo",
+                              "sub": "service 1",
+                              "exp": 1300819380,
+                              "jti": 0012300123
+                              "name": "thajo",
+                              "admin": true,
+                              "scope": ["profile", "email", "resources"]
+                            }
+                            ```
+                            base64encode on the above will get you the middle part of the JWT.
 
+
+                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+                            **eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.**
+                            5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
+
+                        </script>
+                </section>
+                <section data-markdown>
+                        <script type="text/template">
+                          ## Signature
+
+                          ```
                           let encodedString = base64UrlEncode(header) + "." + base64UrlEncode(payload);
                           let signature = HMACSHA256(encodedString, 'secret');
+                          ```
+
+                          ```
+                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+                            eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.
+                            **5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw**
                           ```
 
 
@@ -318,7 +324,7 @@
                 </section>
                 <section data-markdown>
                         <script type="text/template">
-                          ![jhk](../images/oauth-hist.png))
+                          ![jhk](../images/oauth-hist.png)
                         </script>
                 </section>
                 <section data-markdown>
@@ -413,10 +419,6 @@ Accept: application/vnd.github.v3+json
                         </script>
                 </section>
 
-
-
-
-            </section>
         </div>
     </div>
 
