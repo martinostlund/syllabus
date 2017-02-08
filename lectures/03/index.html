@@ -83,7 +83,6 @@
                           * Attack vectors
                           * Authentication/Authorization
                         * Some things about
-                          * API keys
                           * Rate limit
                           * Filtering/Partial response
                           * Versioning
@@ -91,9 +90,28 @@
                       </script>
               </section>
               <section>
+
+
                 <section data-markdown>
                         <script type="text/template">
-                          ## Web API - Security
+                          ## Attack vectors
+                          * New technology, old threats
+                            * Injections, xss, csrf...be suspicious!
+                            * FIEO, Filter input, escape output
+                            * JSON Schema (http://json-schema.org/)
+                          * HTTPS everywhere!
+                          * Long lived tokens, APIkeys
+                            * Replay attacks
+                          * Authentication/Authorization
+                            * Protecting resources
+                            * Stateless? Sessions?
+                          <aside class="notes">
+                          </aside>
+                        </script>
+                </section>
+
+                <section data-markdown>
+                        <script type="text/template">
 
                           * Authentication
                             * 401 unauthorized
@@ -110,31 +128,14 @@
 
                 <section data-markdown>
                         <script type="text/template">
-                          ## Attack vectors
-                          * Same as before!
-                          * HTTPS everywhere!
-                          * Replay attacks
-                          * Long lived tokens, APIkeys
-                          * Protecting resources
-                            * ACL
-
-
-                          <aside class="notes">
-                          </aside>
-                        </script>
-                </section>
-
-                <section data-markdown>
-                        <script type="text/template">
                           ## Strategies
-                          * Open API!
-
+                          * Open and public! Read-only!
                           * HTTP Authentication
+                          * API keys?
                           * Token-based authentication
-                            * API keys?
+                          * OAuth, OpenID Connect
+                          * ...
 
-                          * OAuth
-                            * Standard for web-based token handling
                           <aside class="notes">
                           </aside>
                         </script>
@@ -143,6 +144,7 @@
                 <section data-markdown>
                         <script type="text/template">
                           ## HTTP Basic authentication
+                          Simple, standard, good support. Browser compability
                           ```
                             // Header from Server
                             401 Unauthorized HTTP/1.1
@@ -164,7 +166,10 @@
                 <section data-markdown>
                         <script type="text/template">
                           ## HTTP Digest authentication
-                          There is "a more secure" HTTP authentication but...
+                          There is "a more secure" HTTP authentication
+                          ![yeah](../images/http_digest.png)
+
+                          but...
 
                           ![sdsd](../images/whatever.png)
 
@@ -176,90 +181,25 @@
 
                 <section data-markdown>
                         <script type="text/template">
+                          ...let´s skip that!
+
+                          ![sdsd](../images/whatever.png)
+
+
+                          <aside class="notes">
+                          </aside>
+                        </script>
+                </section>
+
+                <section data-markdown>
+                        <script type="text/template">
                           ## Token-based
                           ![token](../images/tokenauth.png)
 
+                          Secret generated
                           Avoid sending in URL - There are logging proxies out there
                           Use custom header or Authorization header
-                        </script>
-                </section>
-
-                <section data-markdown>
-                        <script type="text/template">
-                          ## Token-based
-                          * Revoke, invalidate
-                          * Time limit
-                          * Long living? Tokens in devices.
-                          *
-                        </script>
-                </section>
-
-                <section data-markdown>
-                        <script type="text/template">
-                          ```
-                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
-                          ```
-                        </script>
-                </section>
-                <section data-markdown>
-                        <script type="text/template">
-                          ## JWT
-                          JSON Web Token
-                          Standard
-                          Single signed login
-                          Carry all info in it self
-                            "JSON"
-                            Every one can see the info (no sensitive)
-                            In cookie?
-                            IN bearer?
-                        </script>
-                </section>
-                <section data-markdown>
-                        <script type="text/template">
-                          ```
-                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
-                          ```
-                          header
-                          Payload
-                          Signature
-                          base64 encoded
-                        </script>
-                </section>
-                <section data-markdown>
-                        <script type="text/template">
-                          ## JWT
-                          JSON Web Token
-
-                          one hour after login?
-                          one hour after last activity?
-                          Encryption?
-
-                        </script>
-                </section>
-                <section data-markdown>
-                        <script type="text/template">
-                          ## OAuth
-                          Standard, sharing resouces
-
-                        </script>
-                </section>
-                <section data-markdown>
-                        <script type="text/template">
-                          ## OAuth
-
-                        </script>
-                </section>
-                <section data-markdown>
-                        <script type="text/template">
-                          ## OAuth
-
-                        </script>
-                </section>
-
-                <section data-markdown>
-                        <script type="text/template">
-                          ## Things to think about
-
+                          Time limit
                         </script>
                 </section>
 
@@ -267,13 +207,172 @@
                         <script type="text/template">
                           ## API keys
 
+                          ```IP84UTvzJKds1Jomx8gIbTXcEEJSUilGqpxCcmnx```
+
+                          * Authentication/Authorization?
+                            * vs. username/password
+                            * long-lived?
+                            * Easy to make public?
+                            * "API keys are not API security"
+
+                          * Track how the API is beeing used
+                            * Use API keys for identification and analytics
+                            * Rate limit
+                            * Easy to revoke/renew
+                        </script>
+                </section>
+
+
+                <section data-markdown>
+                        <script type="text/template">
+                          ```
+                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
+                          ```
+                        </script>
+                </section>
+                <section data-markdown>
+                        <script type="text/template">
+                          ## JWT
+                          * JSON Web Token
+                          * open standard (RFC 7519)
+                          * JWTs are self-contained - Carry all info in it self
+                            * "JSON", great language support
+                            * Every one can see the info (no sensitive should be there)
+                            * In cookie?, IN bearer?
+                        </script>
+                </section>
+                <section data-markdown>
+                        <script type="text/template">
+                          ```
+                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
+                          ```
+                          Header
+                          Payload
+                          Signature
+
                         </script>
                 </section>
 
                 <section data-markdown>
                         <script type="text/template">
-                          ## Rate Limit
+                          ```
+                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
+                          ```
+                          Header
 
+                          ```
+                          {
+                            "typ": "JWT",
+                            "alg": "HS256"
+                          }
+                          ```
+                          base64encode on the above will get you the first part of the JWT.
+
+                        </script>
+                </section>
+                <section data-markdown>
+                        <script type="text/template">
+                          ```
+                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
+                          ```
+                          Payload
+
+                          iss: The issuer of the token
+                          sub: The subject of the token
+                          aud: The audience of the token
+                          exp: This will probably be the registered claim most often used. This will define the expiration in NumericDate value. The expiration MUST be after the current date/time.
+                          nbf: Defines the time before which the JWT MUST NOT be accepted for processing
+                          iat: The time the JWT was issued. Can be used to determine the age of the JWT
+                          jti: Unique identifier for the JWT. Can be used to prevent the JWT from being replayed. This is helpful for a one time use token.
+
+
+                          ```
+                          {
+                            "iss": "scotch.io",
+                            "exp": 1300819380,
+                            "name": "Chris Sevilleja",
+                            "admin": true
+                          }
+                          ```
+                          base64encode on the above will get you the middle part of the JWT.
+
+                        </script>
+                </section>
+                <section data-markdown>
+                        <script type="text/template">
+                          ```
+                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
+                          ```
+                            Signature
+                            ```
+
+                          let encodedString = base64UrlEncode(header) + "." + base64UrlEncode(payload);
+                          let signature = HMACSHA256(encodedString, 'secret');
+                          ```
+
+
+                        </script>
+                </section>
+                <section data-markdown>
+                        https://jwt.io/#debugger
+                </section>
+                <section data-markdown>
+                        <script type="text/template">
+                          ![jhk](../images/oauth-hist.png))
+                        </script>
+                </section>
+                <section data-markdown>
+                        <script type="text/template">
+                          ## OAuth 2
+
+                          OAuth 2.0 authorization framework
+                          Standard, sharing resouces
+                          * Resource Owner - User
+                          * Client - Frontend app
+                          * Resource Server - The API
+                          * Authorization Server - Where users live
+                        </script>
+                </section>
+                <section data-markdown>
+                        <script type="text/template">
+                          ## OAuth 2
+                          ![jdjd](../images/oauth-clean.png)
+                        </script>
+                </section>
+                <section data-markdown>
+                        <script type="text/template">
+                          ## OAuth 2
+                          ![jdjd](../images/oauth-diagram.png)
+                        </script>
+                </section>
+                <section data-markdown>
+                        <script type="text/template">
+                          ## OpenID Connect
+                          is an interoperable authentication protocol based on the OAuth 2.0
+                           In technical terms, OpenID Connect specifies a RESTful HTTP API, using JSON as a data format.
+                        </script>
+                </section>
+                <section>
+                  <iframe src="http://passportjs.org/" frameborder="0"></iframe>
+                </section>
+                <section data-markdown>
+                        <script type="text/template">
+                          ## Things to think about
+
+                        </script>
+                </section>
+
+
+
+                <section data-markdown>
+                        <script type="text/template">
+                          ## Rate Limit
+                          Begränsa antalet anrop till ditt API.
+                          Headers som börjar med X har använts som custom headers Skickas med i respons från servern
+                          X-Rate-Limit-Limit - Antalet anrop inom en tidsperiod
+                          X-Rate-Limit-Remaining - Antal kvarstående anrop
+                          X-Rate-Limit-Reset - Antal sekunder kvar tills nästa "nollställning"
+                          429 Too Many Requests
                         </script>
                 </section>
 
@@ -282,14 +381,28 @@
                 <section data-markdown>
                         <script type="text/template">
                           ## Versioning
+                          GET http:⁄⁄www.api.example.com/v1/products
+GET http:⁄⁄www.api.example.com/v2/products
 
+# No fun hacking in browser
+Accept: application/vnd.coursepress-data+json;version=2.0
+Accept: application/vnd.github.v3+json
                         </script>
                 </section>
 
                 <section data-markdown>
                         <script type="text/template">
                           ## Filtering/Partial response
-
+                          ⁄users⁄thajo:(firstname,lastname,email)
+                          ⁄users⁄thajo?fields=firstname,lastname,email
+                          I http-protokollet finns Content-Range men...
+                          ⁄users?page=3&rrp=25
+                          ⁄users?start=100&count=25
+                          ⁄users?offset=100&limit=25
+                          {
+                            "prev": "http://localhost/api/v1/users/?offset=0&limit=25",
+                            "next": "http://localhost/api/v1/users/?offset=50&limit=25"
+                          }
                         </script>
                 </section>
 
