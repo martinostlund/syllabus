@@ -93,13 +93,13 @@
 
                 <section data-markdown>
                         <script type="text/template">
-                          ## Attack vectors
+                          ## Attack vectors - Web APIs
                           * New technology, old threats
                             * Injections, xss, csrf...be suspicious!
                             * FIEO, Filter input, escape output
                             * JSON Schema (http://json-schema.org/)
                           * HTTPS everywhere!
-                          * Long lived tokens, APIkeys
+                          * Long lived tokens/passwords/"sessions"
                             * Replay attacks
                           * Authentication/Authorization
                             * Protecting resources
@@ -131,8 +131,8 @@
                           ## Strategies - AuthN, AuthZ
                           * Open and public! Read-only!
                           * HTTP Authentication
-                          * API keys?
                           * Token-based authentication
+                          * API keys?
                           * OAuth, OpenID Connect
                           * ...
 
@@ -165,20 +165,20 @@
                         </script>
                 </section>
 
-                <section data-markdown>
-                        <script type="text/template">
-                          ## HTTP Digest authentication
-                          There is "a more secure" HTTP authentication
+                <section>
+                          <h2>HTTP Digest authentication</h2>
+                          A more "secure" HTTP authentication.
+                          <br />
                           MD5 cryptographic hashing with usage of nonce values to prevent replay attacks.
                           <div class="center">
-                            <img src="../images/http_digest.jpg" width="40%" alt="">
+                            <img src="../images/http_digest.jpg" width="45%" alt="">
 
                           </div>
 
                           Prevents using a strong password hashing algorithm...so...
                           <aside class="notes">
                           </aside>
-                        </script>
+
                 </section>
 
                 <section data-markdown>
@@ -196,10 +196,11 @@
                 <section data-markdown>
                         <script type="text/template">
                           ## Token-based solutions
-                          ![token](../images/tokenauth.png)
+                          <img src="../images/tokenauth.png" width="70%" alt="">
+
 
                           * Avoid sending in URL - There are logging proxies out there
-                          * Use custom header or **Authorization** header
+                          * Use custom header or **Authorization** header (Bearer)
                           * Time limit
                         </script>
                 </section>
@@ -224,6 +225,7 @@
 
 
                 <section>
+                    <h2>More about tokens...</h2>
                       eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
                       eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gS
                       MOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.
@@ -232,12 +234,12 @@
 
                 <section data-markdown>
                         <script type="text/template">
-                          ## JWT
+                          ## JWT ["jot"]
                           * JSON Web Token
-                          * open standard (RFC 7519)
+                          * Industry standard RFC 7519
                           * JWTs are self-contained - Carry all info in it self
                             * "JSON", great language support
-                            * Every one can see the info (no sensitive should be there)
+                            * Every one can see the info (if not encrypted JSON Web Encryption (JWE))
                             * In cookie?, In Authorization-header (Bearer)?
                         </script>
                 </section>
@@ -248,7 +250,7 @@
                           * Payload
                           * Signature
 
-                          This is JSON! - but base64encoded
+                          First two is JSON! - but base64encoded
 
                         </script>
                 </section>
@@ -316,7 +318,7 @@
 
                           OAuth 2.0 is a Access Granting, Delegation framework
 
-                          <img src="../images/oauth-clean.png" width="40%" alt="">
+                          <img src="../images/oauth-clean.png" width="35%" alt="">
                           * Resource Owner - User
                           * Client - Frontend app
                           * Resource Server - The API
@@ -337,6 +339,7 @@
                           * An standarized authentication protocol based on the OAuth 2.0
                           * Also get a ID Token (JWT) with info about the identity of the end-user
                           * ID Tokens Works with multiple providers, validates the tokens (public key - RSA256)
+                          * See video in resources
 
                         </script>
                 </section>
