@@ -112,7 +112,7 @@
                 <section data-markdown>
                         <script type="text/template">
                           ### Authentication
-                            401 unauthorized
+                            401 Unauthorized
 
                             "You faild to log in, Please try again!"
 
@@ -120,7 +120,7 @@
                           ### Authorization
                             403 Forbidden
 
-                            "(Maybe) I know who you are but you are not allowed here. Please go away and do not bother me"
+                            "(Maybe) I know who you are but you are not allowed here. Please go away and do not bother me anymore on this URL"
                           <aside class="notes">
                           </aside>
                         </script>
@@ -175,7 +175,7 @@
 
                           </div>
 
-                          Prevents using a storng password hashing algorithm...so...
+                          Prevents using a strong password hashing algorithm...so...
                           <aside class="notes">
                           </aside>
                         </script>
@@ -243,16 +243,12 @@
                 </section>
                 <section data-markdown>
                         <script type="text/template">
-                          ```
-                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
-                            eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.
-                            5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
-                          ```
+                          <img src="../images/jwttoken.png" width="70%" alt="">
                           * Header
                           * Payload
                           * Signature
 
-                          This is JSON!
+                          This is JSON! - but base64encoded
 
                         </script>
                 </section>
@@ -262,18 +258,12 @@
                           ##Header
 
 
-                          ```
-                          {
-                            "typ": "JWT",
-                            "alg": "HS256"
-                          }
-                          ```
+                          <img src="../images/jwt-header.png" width="30%" alt="">
+
                           base64encode on the above will get you the first part of the JWT.
 
 
-                          **eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.**
-                          eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.
-                          5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
+                          <img src="../images/jwttoken.png" alt="">
 
                         </script>
                 </section>
@@ -281,23 +271,12 @@
                         <script type="text/template">
                             ##   Payload
 
-                            ```
-                            {
-                              "iss": "lnu.se/thajo",
-                              "sub": "service 1",
-                              "exp": 1300819380,
-                              "jti": 0012300123
-                              "name": "thajo",
-                              "admin": true,
-                              "scope": ["profile", "email", "resources"]
-                            }
-                            ```
+                            <img src="../images/jwt-payload.png" width="30%" alt="">
+
                             base64encode on the above will get you the middle part of the JWT.
+                            Can be read by the client! No sensitive data please!
 
-
-                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
-                            **eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.**
-                            5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw
+                            <img src="../images/jwttoken.png" alt="">
 
                         </script>
                 </section>
@@ -310,17 +289,21 @@
                           let signature = HMACSHA256(encodedString, 'secret');
                           ```
 
-                          ```
-                            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
-                            eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gSMOkZ2dlcnVkIiwia2luZyI6dHJ1ZX0.
-                            **5FyS9NmwTAaK8t_RQFM8FJpdPVTdaIEn7H7xuCmVEIw**
-                          ```
+                          <img src="../images/jwttoken.png" alt="">
 
 
                         </script>
                 </section>
                 <section data-markdown>
                         https://jwt.io/#debugger
+                </section>
+
+                <section>
+                        <img src="../images/jwt-microservices.png" alt="">
+
+                        Token by reference - Contains no information outside the network
+                        <br>
+                        Token by value - Contains all necessary information
                 </section>
                 <section data-markdown>
                         <script type="text/template">
@@ -331,40 +314,44 @@
                         <script type="text/template">
                           ## OAuth 2
 
-                          OAuth 2.0 authorization framework
-                          Standard, sharing resouces
+                          OAuth 2.0 is a Access Granting, Delegation framework
+
+                          <img src="../images/oauth-clean.png" width="40%" alt="">
                           * Resource Owner - User
                           * Client - Frontend app
                           * Resource Server - The API
-                          * Authorization Server - Where users live
+                          * Authorization Server - Where users live / third party?
                         </script>
                 </section>
+
                 <section data-markdown>
                         <script type="text/template">
                           ## OAuth 2
-                          ![jdjd](../images/oauth-clean.png)
-                        </script>
-                </section>
-                <section data-markdown>
-                        <script type="text/template">
-                          ## OAuth 2
-                          ![jdjd](../images/oauth-diagram.png)
+                          <img src="../images/oauth-diagram.png" width="80%" alt="">
+
                         </script>
                 </section>
                 <section data-markdown>
                         <script type="text/template">
                           ## OpenID Connect
-                          is an interoperable authentication protocol based on the OAuth 2.0
-                           In technical terms, OpenID Connect specifies a RESTful HTTP API, using JSON as a data format.
+                          * An standarized authentication protocol based on the OAuth 2.0
+                          * Also get a ID Token (JWT) with info about the identity of the end-user
+                          * ID Tokens Works with multiple providers, validates the tokens
+
                         </script>
                 </section>
-                <section>
-                  <iframe src="http://passportjs.org/" frameborder="0"></iframe>
+                <section  data-background-iframe="http://passportjs.org/">
+
                 </section>
+
+
                 <section data-markdown>
                         <script type="text/template">
                           ## Things to think about
-
+                          * Rate limit
+                          * Versioning
+                          * Partial response
+                          * Web Hooks
                         </script>
                 </section>
 
@@ -373,12 +360,15 @@
                 <section data-markdown>
                         <script type="text/template">
                           ## Rate Limit
-                          Begränsa antalet anrop till ditt API.
-                          Headers som börjar med X har använts som custom headers Skickas med i respons från servern
-                          X-Rate-Limit-Limit - Antalet anrop inom en tidsperiod
-                          X-Rate-Limit-Remaining - Antal kvarstående anrop
-                          X-Rate-Limit-Reset - Antal sekunder kvar tills nästa "nollställning"
-                          429 Too Many Requests
+
+                          Limit the number of request to the API
+
+                          * X-RateLimit-Limit - Number of calls during the time slot
+                          * X-RateLimit-Remaining - Number of remaining calls
+                          * X-RateLimit-Reset - Time when the call counter will be reseted
+                          * 429 Too Many Requests
+
+                          <img src="../images/ratelimit.png" width="40%" alt="">
                         </script>
                 </section>
 
@@ -387,36 +377,57 @@
                 <section data-markdown>
                         <script type="text/template">
                           ## Versioning
-                          GET http:⁄⁄www.api.example.com/v1/products
-GET http:⁄⁄www.api.example.com/v2/products
 
-# No fun hacking in browser
-Accept: application/vnd.coursepress-data+json;version=2.0
-Accept: application/vnd.github.v3+json
+                          ```
+                          GET http://www.api.example.com/v1/products
+                          GET http://www.api.example.com/v2/products
+                          ```
+                          vs.
+
+                          ```
+                          Accept: application/vnd.coursepress-data+json;version=2.0
+                          Accept: application/vnd.github.v3+json
+                          ```
+                          vs.
+
+                          HATEOAS
                         </script>
                 </section>
 
                 <section data-markdown>
                         <script type="text/template">
                           ## Filtering/Partial response
-                          ⁄users⁄thajo:(firstname,lastname,email)
-                          ⁄users⁄thajo?fields=firstname,lastname,email
+                          ```
+                          /users/thajo:(firstname,lastname,email)
+                          /users/thajo?fields=firstname,lastname,email
+                          ```
+
                           I http-protokollet finns Content-Range men...
-                          ⁄users?page=3&rrp=25
-                          ⁄users?start=100&count=25
-                          ⁄users?offset=100&limit=25
+                          ```
+                          /users?page=3&rpp=25
+                          /users?start=100&count=25
+                          /users?offset=100&limit=25
                           {
-                            "prev": "http://localhost/api/v1/users/?offset=0&limit=25",
-                            "next": "http://localhost/api/v1/users/?offset=50&limit=25"
+                            "prev": "/api/users/?offset=0&limit=25",
+                            "next": "/api/users/?offset=50&limit=25"
                           }
+                          ```
                         </script>
                 </section>
 
                 <section data-markdown>
                         <script type="text/template">
                           ## Web Hooks
+                          * Server-to-server
+                          * Publish / Subscribe
+
+                          <img src="../images/webhook.png" width="70%" alt="">
 
                         </script>
+                </section>
+
+                <section class="center">
+                  <img src="../images/elefant.jpg" width="60%" alt="">
                 </section>
 
         </div>
