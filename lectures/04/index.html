@@ -108,14 +108,13 @@
                 </section>
                 <!-- findability -->
                 <section>
-                  <section data-markdown>
+                  <section data-markdown class="center">
                           <script type="text/template">
                             ## Layer 2 - Find
-                            <img src="../images/wot-layers.png" alt="">
+                            <img src="https://docs.google.com/drawings/d/1he0qedPY3_-lpGl84aneSZmlWlz2-ClFliGN5lHRJNo/pub?w=952&h=179" alt="">
                             <br>
                             Discover and understand any entity of the Web of Things
-                            <aside class="notes">
-                            </aside>
+
                           </script>
                   </section>
                   <section data-markdown>
@@ -124,19 +123,20 @@
                             1. Where to send our requests? Finding the root url.
                             2. What can I send and how?
                             3. The meaning of the information (the semantics)
-                            <aside class="notes">
-                            </aside>
+
+                            <img src="../images/where.gif" alt="">
                           </script>
                   </section>
                   <section data-markdown>
                           <script type="text/template">
                             ## The bootstrap problem - LAN
-                            1. A note with the URL
-                            2. QR code, Bluetooth, NFC
-                            3. Network discovery protocols
+                            - "A note" with the URL
+                            - QR code, Bluetooth, NFC
+                            - Network discovery protocols
                               - mDNS (multicast Domain Name System)
+                              - Not HTTP
                               - Bad browser support, plug-ins?
-                            4. HTTP API in the router (default gateway)
+                            - HTTP API in the router (default gateway)
 
                             <aside class="notes">
                             </aside>
@@ -160,24 +160,19 @@
                   <section data-markdown>
                           <script type="text/template">
                             ## Discover the resources of a web thing
+                            - HATEOAS - if application/json choosen
+                            - When doing a GET on a Web Thing (regardless of the representation chosen) - Add the Link-header
+                            - rel = Relation type (link type) definied in RFC5988
 
-                            From the In the W3C Member submission...
 
-                            When doing a GET on a Web Thing (regardless pf the representation chosen)
                             ```
                               Link: <model/>; rel="model"
                                     <properties/>; rel="properties"
                                     <actions/>; rel="actions"
-                                    <product/>; rel="product"
-                                    <type/>; rel="type"
-                                    <help/>; rel="help"
+                                    <http://wot.example.com/>; rel="type"
+                                    <http://wot.example.com/doc/>; rel="help"
                                     <ui/>; rel="ui"
                             ```
-                            rel = Relation type (link type) definied in RFC5988
-                            HATEOAS
-                            Also as application/json if choosen
-                            <aside class="notes">
-                            </aside>
                           </script>
                   </section>
 
