@@ -75,33 +75,307 @@
                 </p>
             </section>
 
+            <section>
+               <section data-markdown>
+                        <script type="text/template">
+                          ## Content
+                          * Status in the course
+                          * Web of Things
+                            * Web of things architecture
+                              * Layer 1 - Access
+                              * Layer 2 - Find
+                              * Layer 3 - Share
+                              * Layer 4 - Compose
+                        </script>
+                </section>
 
-             <section data-markdown>
+
+                  <section data-markdown>
+                          <script type="text/template">
+                            ## Status
+                            * Feedback on the Essay?
+                            * Info about the project?
+                              * Groups
+                              * Oral exam?
+                            * Guest lectures
+                              * Tisdag 28/2    10:15-12:00 - Mattias Johansson, CLX
+                              * Tisdag 7/3     10:15-12:00 - Welf Löwe, Big data-markdown
+                              * Torsdag 9/3    13:15-15:00 - Linda Petersson, Rekrytering på webben
+                            <aside class="notes">
+                            </aside>
+                          </script>
+                  </section>
+                </section>
+                <!-- findability -->
+                <section>
+                  <section data-markdown>
+                          <script type="text/template">
+                            ## Layer 2 - Find
+                            <img src="../images/wot-layers.png" alt="">
+                            <br>
+                            Discover and understand any entity of the Web of Things
+                            <aside class="notes">
+                            </aside>
+                          </script>
+                  </section>
+                  <section data-markdown>
+                          <script type="text/template">
+                            ## The bootstrap problem
+                            1. Where to send our requests? Finding the root url.
+                            2. What can I send and how?
+                            3. The meaning of the information (the semantics)
+                            <aside class="notes">
+                            </aside>
+                          </script>
+                  </section>
+                  <section data-markdown>
+                          <script type="text/template">
+                            ## The bootstrap problem - LAN
+                            1. A note with the URL
+                            2. QR code, Bluetooth, NFC
+                            3. Network discovery protocols
+                              - mDNS (multicast Domain Name System)
+                              - Bad browser support, plug-ins?
+                            4. HTTP API in the router (default gateway)
+
+                            <aside class="notes">
+                            </aside>
+                          </script>
+                  </section>
+
+                  <section data-markdown>
+                          <script type="text/template">
+                            ## The bootstrap problem - Global
+                            * How do we find resources on the web?
+                              * Search engines
+                                * Web crawling
+                                * New resources are discovered by links
+                              * Semantic web
+
+                            <aside class="notes">
+                            </aside>
+                          </script>
+                  </section>
+
+                  <section data-markdown>
+                          <script type="text/template">
+                            ## Discover the resources of a web thing
+
+                            From the In the W3C Member submission...
+
+                            When doing a GET on a Web Thing (regardless pf the representation chosen)
+                            ```
+                              Link: <model/>; rel="model"
+                                    <properties/>; rel="properties"
+                                    <actions/>; rel="actions"
+                                    <product/>; rel="product"
+                                    <type/>; rel="type"
+                                    <help/>; rel="help"
+                                    <ui/>; rel="ui"
+                            ```
+                            rel = Relation type (link type) definied in RFC5988
+                            HATEOAS
+                            Also as application/json if choosen
+                            <aside class="notes">
+                            </aside>
+                          </script>
+                  </section>
+
+                  <section data-markdown>
+                          <script type="text/template">
+                            ## How to describe a web thing - The model
+                            * Written documentation?
+                              * Automatic?
+                              * More errors?
+                              * Updated documentation?
+                            * The web of things model
+                              * Proposal, member suggestion to W3C
+                              * Flexible, expressiveness, good usabillity
+
+
+                            <aside class="notes">
+                            </aside>
+                          </script>
+                  </section>
+
+                  <section data-markdown>
+                          <script type="text/template">
+                            <img src="../images/wot-resources.png" alt="">
+
+                            Model - Metadata about the thing <br>
+                            Properties - Variable describing internal state <br>
+                            Action - Funtion to invoke on a thing like "open", "close"... <br>
+                            Things - If the web thing is a proxy to other devices
+
+                            <aside class="notes">
+                            </aside>
+                          </script>
+                  </section>
+
+
+
+                  <section data-markdown>
+                          <script type="text/template">
+                            ## Actions
+
+                            GET {wt}/actions
+
+                            ```
+                            Link: <http://{base-url}/#actions-resource>; rel=type
+
+                            [{"id" : "ledState", "name": "Changes the state of the LED lamps"}]
+
+                            ```
+                            <aside class="notes">
+                            </aside>
+                          </script>
+                  </section>
+
+                  <section data-markdown class="center">
+                          <script type="text/template"> [Model from the books github](https://github.com/webofthings/webofthings.js/blob/3e0de00aa32b1e939401a8ba566b27c912260156/resources/piNoLd.json)
+                          </script>
+
+                  </section>
+
+                  <section data-markdown>
+                          <script type="text/template">
+                            ## Properties
+
+                            GET {wt}/properties
+                            ```
+                            Link: <http://{base-url}/#properties-resource>; rel=type
+                            ```
+
+                            ```
+                            [
+                              {
+                                "id" : "temperature-indoor-indoor",
+                                "name" : "Temp sensor DHT22",
+                                "values" : {
+                                  "t" : 21,
+                                  "timestamp": "2017-02-20T10:04:52.473Z"
+                                }
+                              },
+                              {
+                                "id" : "temperature-indoor-outdoor",
+                                "name" : "Temp sensor DS18B20",
+                                "values" : {
+                                  "t" : 3,
+                                  "timestamp": "2017-02-20T10:05:52.473Z"
+                                }
+                              }
+
+                            ]
+                            ```
+                            <aside class="notes">
+                            </aside>
+                          </script>
+                  </section>
+                  <section data-markdown>
+                          <script type="text/template">
+                            ## Properties
+
+                            GET {wt}/properties/temperature-indoor
+
+                            ```
+                            [
+                              { "t": 21.3, "timestamp": "2017-02-20T10:05:52.473Z" },
+                              { "t": 21.4, "timestamp": "2017-02-20T10:05:53.473Z" },
+                              { "t": 21.3, "timestamp": "2017-02-20T10:05:54.473Z" }
+                            ]
+                            ```
+                            <aside class="notes">
+                            </aside>
+                          </script>
+                  </section>
+
+                  <section data-markdown>
+                          <script type="text/template">
+                            ## Actions
+
+                            POST {wt}/actions/ledState
+
+                            ```
+                            { "ledId": 2, "state": "true" },
+                            ```
+                            ```
+                            204 No Content
+                            ```
+                            <aside class="notes">
+                            </aside>
+                          </script>
+                  </section>
+
+                  <section data-markdown>
+                          <script type="text/template">
+                            ## The semantic web of things
+
+                            The semantic web - The idea to get machines to understand the information on the web. Bringing life to a more intelligens web.
+
+                            HTML is unstructured (often) - What is the page about?
+                            Linked data - A way to connect structured data on the Web
+
+                            <img src="../images/semanticweb.png" alt="">
+                            <aside class="notes">
+                            </aside>
+                          </script>
+                  </section>
+
+                  <section data-markdown>
+                          <script type="text/template">
+                            ## The semantic web - The semantics
+
+                            * How to agree on the semantics?
+                              * Describe a device in a standard way...
+                            * Vocabulary, taxonomy, ontologies - A predefined set of terms that describe someting
+                              * Use or Create
+                            * schema.org
+                              * [schema.org/Product](https://schema.org/Product)
+
+                            <aside class="notes">
+                            </aside>
+                          </script>
+                  </section>
+                  <section data-markdown>
+                          <script type="text/template">
+                            ## Technologies for the semantic web
+                            * RDF - Resource Description Framework - Heavy standard
+                            * RDFa - Lighter version, embed in HTML (Open Graph)
+                            * Microformat - Simple, embeded in HTML
+                            * JSON-LD - Yeay! JSON!
+                              "We strongly recommend using JSON-LD in your implementation."
+
+                              [Example for web pages](https://www.schemaapp.com/tips/how-does-google-reward-you-for-using-json-ld/)
+                          </script>
+                    </section>
+
+                    <section data-markdown>
                       <script type="text/template">
-                        ## Content
-                        * Status about this course
-                        *
+                        ## JSON-LD
+                        ```
+                        {
+                          "@context": "http://schema.org/Product",
+                          "@id": "http://localhost:8484",
+                          "name": "My WoT Raspberry PI",
+                          "description": "A simple WoT-connected Raspberry PI for the WoT book.",
+                          "productID" : "asin:B00T2U7R7I",
+                          "manufacturer" : "Raspberry Pi",
+                          "model" : "100437",
+                          ...
+                        ```
                       </script>
+                    </section>
+
+                    <section data-markdown>
+                      <script type="text/template">
+                        ## Remember
+                        * Not a taken standard...yet!
+                        * Apple Homekit, Google Weave/Home...
+                        * Will WoT be a hit?
+                      </script>
+                    </section>
               </section>
 
-
-                <section data-markdown>
-                        <script type="text/template">
-                          ##
-                          <aside class="notes">
-                          </aside>
-                        </script>
-                </section>
-
-                <section data-markdown>
-                        <script type="text/template">
-                          ###
-                          <aside class="notes">
-                          </aside>
-                        </script>
-                </section>
-
-                
 
         </div>
     </div>
