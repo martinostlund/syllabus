@@ -315,32 +315,13 @@
 
                   <section data-markdown>
                           <script type="text/template">
-                            <img src="../images/wot-resources.png" alt="">
+                            <img src="../images/wot-resources.png" width="70%" alt="">
 
-                            Model - Metadata about the thing <br>
-                            Properties - Variable describing internal state <br>
-                            Action - Funtion to invoke on a thing like "open", "close"... <br>
-                            Things - If the web thing is a proxy to other devices
+                            * Model - Metadata about the thing <br>
+                            * Action - Funtion to invoke on a thing like "open", "close"... <br>
+                            * Properties - Variable describing internal state <br>
+                            * Things - If the web thing is a proxy to other devices
 
-                            <aside class="notes">
-                            </aside>
-                          </script>
-                  </section>
-
-
-
-                  <section data-markdown>
-                          <script type="text/template">
-                            ## Actions
-
-                            GET {wt}/actions
-
-                            ```
-                            Link: <http://{base-url}/#actions-resource>; rel=type
-
-                            [{"id" : "ledState", "name": "Changes the state of the LED lamps"}]
-
-                            ```
                             <aside class="notes">
                             </aside>
                           </script>
@@ -364,7 +345,7 @@
                             ```
                             [
                               {
-                                "id" : "temperature-indoor-indoor",
+                                "id" : "temperature-indoor",
                                 "name" : "Temp sensor DHT22",
                                 "values" : {
                                   "t" : 21,
@@ -372,7 +353,7 @@
                                 }
                               },
                               {
-                                "id" : "temperature-indoor-outdoor",
+                                "id" : "temperature-outdoor",
                                 "name" : "Temp sensor DS18B20",
                                 "values" : {
                                   "t" : 3,
@@ -425,10 +406,10 @@
                           <script type="text/template">
                             ## The semantic web of things
 
-                            The semantic web - The idea to get machines to understand the information on the web. Bringing life to a more intelligens web.
-
-                            HTML is unstructured (often) - What is the page about?
-                            Linked data - A way to connect structured data on the Web
+                            * The semantic web - The idea to get machines to understand the information on the web.
+                            * Bringing life to a more intelligens web.
+                            * HTML is unstructured (often) - What is the page about?
+                            * Linked data - A way to connect structured data on the Web
 
                             <img src="../images/semanticweb.png" alt="">
                             <aside class="notes">
@@ -458,9 +439,9 @@
                             * RDFa - Lighter version, embed in HTML (Open Graph)
                             * Microformat - Simple, embeded in HTML
                             * JSON-LD - Yeay! JSON!
-                              "We strongly recommend using JSON-LD in your implementation."
+                              * "We strongly recommend using JSON-LD in your implementation."
 
-                              [Example for web pages](https://www.schemaapp.com/tips/how-does-google-reward-you-for-using-json-ld/)
+                            [Example for web pages](https://www.schemaapp.com/tips/how-does-google-reward-you-for-using-json-ld/)
                           </script>
                     </section>
 
