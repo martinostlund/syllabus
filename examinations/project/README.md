@@ -14,29 +14,53 @@ Skriv simuleringskod. Du behöver inte hela tiden skicka upp din kod på hårdva
 Ni som är många i grupp. Dela upp arbetet. Ge ansvar till olika delar och ha sedan möten där ni diskuterar och lär varandra.
 
 ## Stationerna
-Nedan följer beskrivningar av de stationer vi tillhandahåller. Ni är fria att själva utforma era “tjänster” utifrån den hårdvara som finns. Nedan är förslag och vi ger er frihet att omforma och lägga till egna idéer.
+Nedan följer beskrivningar av de stationer vi tillhandahåller. Ni är fria att själva utforma era “tjänster” utifrån den hårdvara som finns. Nedan är förslag och vi ger er frihet att omforma och lägga till egna idéer. Varje grupp kommer få en ssh-inloggning till respektive station. Detta konto är med i sudo-gruppen men använd sudo så sällan som möjligt då det är kraftfullt och kan förstöra om man inte är försiktig.
 
 ## Station A - Photobox - Distansgrupp
 Hårdvara:
 - Raspberry Pi 3 - Model B
-- Raspberry Pi Camera Module
-- PIR Rörelsedektor ()
-- 1 grön LED (GIPO)
-- 1 röd LED (GIPO)
+- Raspberry Pi Camera Module (är aktiverad på denna pi)
+- PIR Rörelsedektor (GIPO 17)
+- 1 grön LED (GIPO 27)
+- 1 blå LED (GIPO 22)
+- 1 röd LED (GIPO 21)
 
 Förlag: Denna station är tänkt att fungera som en fotolåda som reagerar på rörelser och tar ett foto och på något sätt sparar detta på något smart sätt så att användaren av systemet enkelt kan se de bilder som tagits och när. Stationen kommer finnas i en kartong så när någon öppnar eller kartongen eller rörelsedetektorn på annat blir aktiverad och en bild kan tas med Kameramodulen.
 
 Stationen kan vara lite svår att hantera från distans men ta gärna hjälp av campusstudenter i salen för att aktivera rörelsedektorn och på så sätt ta foton.
 
+https://www.npmjs.com/package/raspicam
+
 ## Station B - Sensorboard - Distans
 Hårdvara:
 - Raspberry Pi 3 - Model B
-- Temperaturmätare (GIPO)
-- Temperaturmätare (GIPO)
-- Luftfuktighet
-- Ljusmätare (GIPO)
+- Temperaturmätare/luftfuktighet AM2302 (GIPO 18)
+- Lufttryck och temperaturmätare BMP180
+- Ljussensor TSL2561
 
 Förlag: Denna station kommer ha en mängd olika sensorer kopplade till sig. Denna enhet blir således en enhet som samlar in och ger ifrån sig massa data som kan presenteras både i realtid och i tidsintervall.
+
+Tips: https://www.npmjs.com/package/raspi-sensors
+(Bör vara installerad globalt och funka att köra require på)
+```
+var RaspiSensors = require('raspi-sensors');
+
+// Init the BMP180 sensor
+var BMP180 = new RaspiSensors.Sensor({
+        type    : "BMP180",
+        address : 0x77
+}, "temp_sensor");
+
+// Init the TSL2561 sensor
+var TSL2561 = new RaspiSensors.Sensor({
+    type    : "TSL2561",
+    address : 0x39
+}, "
+```
+
+https://github.com/momenso/node-dht-sensor
+bcm2835 ska vara installerat på enheten
+
 
 ## Station C - Bring in the student - Campus
 
