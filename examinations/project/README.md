@@ -79,3 +79,12 @@ Hårdvara:
 - Diverse LEDs
 
 Förlag: En rörelsedektor för larm. En knapp för att kunna aktivera och avaktivera larmet (kanske med viss trycksekvens för att kunna stoppa larmet). Använd ljuduttaget för att spela upp ljud när larmet går. Använd olika LED-lampor för att indikera olika statusar.
+
+## Redovisning
+
+### Gruppens Redovisning
+Gruppen redovisar kod i det projektrepositorie som tilldelas er. Där ska också finnas en README.md som beskriver projektet.
+Vad din/er "web thing" gör? Hur applikationen/tjänsten fungerar, eventuella installationsguider och beroenden som finns samt en motivering kring hur din/er implementering stödjer sig på teorierna kring web of things. Använd de termer som tas upp i litteraturen så som integration pattern och de olika lagren i arkitekturmodellen.
+
+### Den enskilde studentens redovisning.
+Du som arbetat i grupp skriver en personlig reflektion över arbetet. Vad har gått bra och vad har gått dåligt i grupparbetet. Vilka specifika delar har Du implementerat/jobbat med. Här har du möjlighet att uttrycka eventuella delar som du vill lyfta fram endest mellan dig och examinator. Detta skickas via mejl till john.haggerud@lnu.se 
