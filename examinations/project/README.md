@@ -18,11 +18,11 @@ Nedan följer beskrivningar av de stationer vi tillhandahåller. Ni är fria att
 
 ## Station A - Photobox - Distansgrupp
 Hårdvara:
-Raspberry Pi 3 - Model B
-Raspberry Pi Camera Module
-PIR Rörelsedektor ()
-1 grön LED (GIPO)
-1 röd LED (GIPO)
+- Raspberry Pi 3 - Model B
+- Raspberry Pi Camera Module
+- PIR Rörelsedektor ()
+- 1 grön LED (GIPO)
+- 1 röd LED (GIPO)
 
 Förlag: Denna station är tänkt att fungera som en fotolåda som reagerar på rörelser och tar ett foto och på något sätt sparar detta på något smart sätt så att användaren av systemet enkelt kan se de bilder som tagits och när. Stationen kommer finnas i en kartong så när någon öppnar eller kartongen eller rörelsedetektorn på annat blir aktiverad och en bild kan tas med Kameramodulen.
 
@@ -30,29 +30,28 @@ Stationen kan vara lite svår att hantera från distans men ta gärna hjälp av 
 
 ## Station B - Sensorboard - Distans
 Hårdvara:
-Raspberry Pi 3 - Model B
-Temperaturmätare (GIPO)
-Temperaturmätare (GIPO)
-Luftfuktighet
-Ljusmätare (GIPO)
-1 grön LED (GIPO)
-1 röd LED (GIPO)
+- Raspberry Pi 3 - Model B
+- Temperaturmätare (GIPO)
+- Temperaturmätare (GIPO)
+- Luftfuktighet
+- Ljusmätare (GIPO)
 
 Förlag: Denna station kommer ha en mängd olika sensorer kopplade till sig. Denna enhet blir således en enhet som samlar in och ger ifrån sig massa data som kan presenteras både i realtid och i tidsintervall.
 
 ## Station C - Bring in the student - Campus
 
 Hårdvara:
-Raspberry Pi 3 - Model B
-LCD Display
-Diverse LEDs
+- Raspberry Pi 3 - Model B
+- LCD Display
+- Diverse LEDs
 
 Förlag: När man är på bilprovningen står man med sin bil utanför och tittar på en display där ens registreringsnummer kommer upp när man ska köra in. Vi tänkte oss något liknande för muntliga examinationer på campus. En display där det kommer upp studentens användarnamn och kontor denne ska gå till. Detta skulle man smidigt vilja kunna styra från t.ex. Slack notifieringar.
 
 ## Station D - Larmsimulator - Campus
 Hårdvara:
-Raspberry Pi 3 - Model B
-PIR rörelsedetektor
-Knapp
-Diverse LEDs
+- Raspberry Pi 3 - Model B
+- PIR rörelsedetektor
+- Knapp
+- Diverse LEDs
+
 Förlag: En rörelsedektor för larm. En knapp för att kunna aktivera och avaktivera larmet (kanske med viss trycksekvens för att kunna stoppa larmet). Använd ljuduttaget för att spela upp ljud när larmet går. Använd olika LED-lampor för att indikera olika statusar.
