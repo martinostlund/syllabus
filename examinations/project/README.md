@@ -82,6 +82,11 @@ Hårdvara:
 
 Förlag: En rörelsedektor för larm. En knapp för att kunna aktivera och avaktivera larmet (kanske med viss trycksekvens för att kunna stoppa larmet). Använd ljuduttaget för att spela upp ljud när larmet går. Använd olika LED-lampor för att indikera olika statusar.
 
+redLed GPIO 22
+greenLed GPIO 10
+PIR GPIO 17
+Button GPIO 27
+
 ## Redovisning
 
 ### Gruppens Redovisning
