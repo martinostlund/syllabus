@@ -1,6 +1,6 @@
 ## Projektbeskrivning
 
-I slutet av kursen är tanken att vi ska göra en mindre projektuppgift där ni kommer jobba i grupper. Vi kommer tillhandahåll fyra olika stationer (två distans, två campus) med diverse sensorer/enheter inkopplade. Er uppgift blir att göra om dessa till "Web things" som stödjer sig på den teori och de modeller som tas upp i boken.
+I slutet av kursen är tanken att vi ska göra en mindre projektuppgift där ni kommer jobba i grupper. Vi kommer tillhandahåll fyra olika stationer (två distans, två campus) med diverse sensorer/enheter inkopplade. Er uppgift blir att göra om dessa till "Web things" som stödjer sig på den teori och de modeller som tas upp i boken (kap 6 till och med 10).
 
 Ni ska också göra ett enklare gränssnitt där man kan testa funktionaliteten. Det kan bestå av ett eget webbgränssnitt, slackkommandon eller andra typer av webhooks från tjänster. De av er som väljer att köra enskilda projekt på egen hårdvara bör läsa igenom de stationsbeskrivningar som finns för att få en uppfattning om projektets storlek.
 
@@ -10,7 +10,7 @@ Projektuppgiften bedöms som godkänd eller underkänd.
 I samband med slutet av kursen kommer ett individuellt muntligt förhör på kursens innehåll genomföras som leder till ett betyg A-F.
 
 ###Handledning
-Handledningspass finns inlagda i schemat där vi kommer finnas tillgängliga för frågor. Använd dessa! Då vi nu jobbar med hårdvara som kommer finnas på plats i ny228 kan det bli lite . De distansgrupper som kopplar upp sig mot dessa stationer och behöver manuellt ändra eller kontrollera något får ta kontakt med oss eller campusstudenter via slack.
+Handledningspass finns inlagda i schemat där vi kommer finnas tillgängliga för frågor. Använd dessa! Då vi nu jobbar med hårdvara som kommer finnas på plats i ny228 kan det bli lite frågor kring detta. De distansgrupper som kopplar upp sig mot dessa stationer och behöver manuellt ändra eller kontrollera något får ta kontakt med oss eller campusstudenter via slack.
 
 ### Tänk på
 **Skriv simuleringskod.** Du behöver inte hela tiden skicka upp din kod på hårdvaran. Det går att skriva kod som simulerar “actions” och “properties” för att få en enklare workflow under tiden man jobbar. Integrera sedan in koden i hårdvaran.
