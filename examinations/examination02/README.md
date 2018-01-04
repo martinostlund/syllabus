@@ -16,29 +16,33 @@ We will emit obvious requirements like error handling, security and so on. Of co
 * In your examination repository you should provide a [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) collection. The examiner should be able to load this into the POSTMAN application and test your API without any further configuration.
 * No visual UI needed (you are free to do if you want).
 * We recommend writing your API in Node.js
-* Of course - Answer the questions below
+* The code should be published in your examination repository along with a report (see below)
+* The code should be individual created, the examiners may run a code anti-plagiarism tool on your code. Plagiarism will be reported.
 
 ## Our suggestion for those without own ideas
 The fishing club "Den svartmunnade smörbultens banne" needs an API for collection fishing reports and wants your help. They are thinking of building a client application but want a separated web API before taking this process along. The idea is that fishermen should be able to report their catch and that this data could be made public. They want data like:
 
 * The user which catches the fish
-* The position (longitude and latitude)
+* The position (longitude and latitude) of the catch
 * Specie of the fish
 * Weight
 * Length
-* image-url
+* Image-url
 * Timestamp
 * Other information: like equipment, fishing method and so on
 * A text describing the catch
 
 To do un-safe HTTP calls the API must have some kind of Authentication/Authorization. A user should be able to sign in through the API in a safe way. You are free to choose your authentication strategy.
 
-Of course you are free to implement further feature you want in your web API.
+Of course you are free to implement further feature in your web API.
 
-## Questions
-This examination is a hand-in assignment. You will need to defend your design decisions in writing by answering the below questions. This questions should be answered in your repository *README.md*.
+## Report
+This examination is a hand-in assignment. You will need to defend your design decisions in writing by answering the below questions in a report. This questions should be answered in your repository *README.md*.
 
-1. How have you implemented the idea of HATEOAS in your API? Motivate your choices and how it support the idea of HATEOAS!
+The repost should include the course code, course name, your name and an introduction describing the problem you have tried to solve.
+
+The following questions should be answered in the report.
+1. How have you implemented the idea of HATEOAS in your API? Motivate your choices and how it support the idea of HATEOAS.
 2. If your solution should implement multiple representations of the resources. How would you do it?
 3. Motivate and defend your authentication solution? Why did you choose the one you did? Pros/Cons.
 4. Explain how your web hook works.
