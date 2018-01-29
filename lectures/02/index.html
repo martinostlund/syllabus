@@ -53,11 +53,11 @@
 
             <!-- CC -->
             <section data-state="lnu-cc">
-                <h2>Licence for this work</h2>
+                <h2>License for this work</h2>
                 <p>
                     This work is produced by <a href="https://github.com/thajo" style="color: #333">John Häggerud</a> for the course 1DV527 at Linnaeus University.
                 </p>
-                <p>All content in this work excluding photographs, icons, picture of course litterature and Linnaeus University logotype and symbol, is licensied under a
+                <p>All content in this work excluding photographs, icons, picture of course literature and Linnaeus University logotype and symbol, is licensed under a
                 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />Creative Commons Attribution 4.0 International License</a>.</p>
                 <h4>You are free to </h4>
                 <ul>
@@ -94,7 +94,8 @@
                           * HTTP-based Application Programming Interface
                             * URL requests
                             * JSON, XML, YML, ...
-                          * UI for data
+                          * An interface for data trough an HTTP URL
+                          
 
                           <aside class="notes">
                            not Web API against browser
@@ -122,10 +123,8 @@
 
                 <section data-markdown class="center">
                         <script type="text/template">
-                          ## Why?
-
-                          <img src="../images/why.gif" alt="">
-
+                          ## Why do I need to write web APIs?
+                         
                         </script>
                 </section>
 
@@ -144,15 +143,6 @@
                         </script>
                 </section>
 
-<!--
-                <section data-markdown class="center">
-                        <script type="text/template">
-                          ## Web API
-                          ![API](../images/api03.png)
-                          #### API-driven development
-                        </script>
-                </section>
--->
                 <section data-markdown class="center">
                         <script type="text/template">
                           ## API-driven development
@@ -162,18 +152,18 @@
 
                 <section data-markdown class="center">
                         <script type="text/template">
-                          ## Server-to-server
+                          ## Service-to-Service
                           ![API](../images/api06.png)
                         </script>
                 </section>
-
+<!--
                 <section data-markdown class="center">
                         <script type="text/template">
                           ## Monolitic web app
                           ![API](../images/monolitic.png)
                         </script>
                 </section>
-
+              -->
 
                 <section data-markdown class="center">
                         <script type="text/template">
@@ -207,9 +197,9 @@
                   <script type="text/template">
                         <img width="45%" src="../images/soap_request.png" alt="">
                         <p class="fragment">
-
+                          "RESTful"<br>
                         ```
-                          GET http://www.example.org/stockprice/IBM.xml
+                          GET http://www.example.org/stockprice/IBM.json
                         ```
                         </p>
                     </script>
@@ -217,63 +207,47 @@
 
 
 
-                <section data-markdown class="center">
-                  <script type="text/template">
-                    ## Types of APIs
-                    * Private, internal
-                    * Partner
-                    * Public
-                  </script>
-                </section>
-
+                
             </section>
 
             <section>
-              <section>
-                <h2>Web APIs - Pros</h2>
-                <ul style="width: 45%; float: left">
-                  <li>Platform independence</li>
-                  <li>SOC, decoupled applications</li>
-                  <li>Flexability, changeability</li>
-                  <li>Simplyfy complex things</li>
-                  <li>Integration, system-to-system</li>
-                  <li>Marketing, usage of service</li>
-                  <li>Transparent, Open Data</li>
-                  <li>Inovation, mashups</li>
-                </ul>
-                <p class="fragment">
-                  <img src="../images/success.jpg" style="float:left" alt="">
-                </p>
-
-
-
-              </section>
-              <section data-background-iframe="https://www.flightradar24.com/60,15/6">
-              </section>
-              <section>
-                <h2>Web APIs - Cons</h2>
-                <ul style="width: 55%; float: left">
-                  <li>More development</li>
-                  <li>Backward compability, maintenance</li>
-                  <li>Security? Data leakage...</li>
-                  <li>Overkill?</li>
-                  <li>Performance?</li>
-                  <li>...?</li>
-
-                </ul>
-                <img src="../images/fail.jpg" width style="float:left" alt="">
-
-              </section>
+                <section data-markdown>
+                    <script type="text/template">
+                      ## Context of APIs
+                      * Private, internal
+                      * Partner
+                      * Public
+                    </script>
+                  </section>
+  
+                  <section data-markdown>
+                    <script type="text/template">
+                      ## Web APIs - Pros for service providers
+                        * Platform independence
+                        * SOC, decoupled applications
+                          * Flexibility
+                          * Testing
+                        * Integration, system-to-system (internal and external)
+                        * Transparent, Open Data
+                        * Innovation, Mashups
+                    </script>
+                  </section>
+            
+                  <section data-markdown>
+                    <script type="text/template">
+                      ## Web APIs - Challenges
+                       * Backward compatibility, maintenance for users
+                        * Versioning
+                        * Changeability?
+                       * Security? 
+                        * Authentication (stateless)
+                        * Data leakage
+                       * Performance?
+                    </script>
+                 </section>
             </section>
 
             <section>
-              <section data-markdown class="center">
-                      <script type="text/template">
-                        ## How do we do it???
-                        ![code](../images/start_dev.gif)
-
-                      </script>
-              </section>
               <section data-markdown class="">
                       <script type="text/template">
                         ## Building Web APIs
@@ -314,11 +288,10 @@
                         * Cacheable
                         * Layered System
                           * A client don´t know if connected to end-server
-                          * Loadbalancing, shared cache...
                         * Uniform interface
                           * Identification of resources
                           * Manipulations through representations
-                          * Self-descripted messages
+                          * Self-explaining messages
                           * Hypermedia as the engine of application state (HATEOAS)
                         * Code-on-demand (optional)
 
@@ -330,7 +303,7 @@
                         ## Identification of resources
                         * ROA (Resource-oriented architecture)
                         * A resource is "a thing"
-                        * URI/URL for identifining a resource
+                        * URI/URL for identifying a resource
                             * https://www.example.com/users/
                             * https://www.example.com/users/thajo
                             * https://www.example.com/users/thajo/projects/SOS
@@ -382,19 +355,22 @@
                     </script>
               </section>
               <section data-markdown class="">
+                  <script type="text/template">
+                    ## Jump to states by clicking links
+                    ![State](../images/state.png)
+
+                  </script>
+            </section>
+              <section data-markdown class="">
                     <script type="text/template">
                       ## Example
                       ![Yeah](../images/github_ui.png)
 
+                      * Quiz-server - follow the links to the next question, where to send the answer
+                      * Learn from others APIs
                     </script>
               </section>
-              <section data-markdown class="">
-                    <script type="text/template">
-                      ## Jump to states by clicking links
-                      ![State](../images/state.png)
-
-                    </script>
-              </section>
+              
               <section data-markdown class="">
                     <script type="text/template">
                       ## https://api.github.com/
@@ -411,7 +387,7 @@
                       Stolen from: https://speakerdeck.com/stilkov/rest-i-dont-think-it-means-what-you-think-it-does
                     </script>
               </section>
-              <section class="center">
+              <section class="">
 
                       <img src="../images/problem.gif" alt="">
 
