@@ -1,5 +1,5 @@
 ## Examination assignment 2
-In this assignment we are going to build a Restful web API. The idea is of course that you will use the theory in this course to build your own API. We encourage you to have your own ideas about the API to build. Maybe you have some kind of application idea you wan´t to start off with an API driven design. For those of you we will present a scenario to follow. That will also give a hint of the extent of this assignment.
+In this assignment we are going to build a Restful web API. The idea is of course that you will use the theory in this course to build your own API. We encourage you to have your own ideas about the API to build. Maybe you have some kind of application idea you want to start off with an API driven design. For those of you we will present a scenario to follow. That will also give a hint of the extent of this assignment.
 
 ## Overall requirements
 
@@ -13,11 +13,12 @@ We will emit obvious requirements like error handling, security and so on. Of co
 * The API should support CRUD operations where all data in the system should be available through API calls.
 * Unsafe HTTP methods and data about users in the system should require some kind of authentication done through the API (you are free to choose implementation method for this).
 * The API should give some ability to register a web hook which will trigger on some, of you chosen, event.
-* In your examination repository you should provide a [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) collection. The examiner should be able to load this into the POSTMAN application and test your API without any further configuration.
-* No visual UI needed (you are free to do if you want).
-* We recommend writing your API in Node.js
+* In your examination repository you should provide a [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) collection. The examiner should be able to load this into the POSTMAN application or a [NEWMAN CLI](https://www.getpostman.com/docs/postman/collection_runs/command_line_integration_with_newman) and test your API without any further configuration. For more information about POSTMAN and NEWMAN se this article: https://scotch.io/tutorials/write-api-tests-with-postman-and-newman
+* No visual UI is needed - We want just an API.
+* We recommend writing your API in Node.js, if you choose another platform provide a configured virtual machine (vagrant or docker) or publish your API on a public URL
 * The code should be published in your examination repository along with a report (see below)
 * The code should be individual created, the examiners may run a code anti-plagiarism tool on your code. Plagiarism will be reported.
+* Make a seed-file  that automatically populated your application with some data for testing
 
 ## Our suggestion for those without own ideas
 The fishing club "Den svartmunnade smörbultens banne" needs an API for collection fishing reports and wants your help. They are thinking of building a client application but want a separated web API before taking this process along. The idea is that fishermen should be able to report their catch and that this data could be made public. They want data like:
@@ -39,7 +40,7 @@ Of course you are free to implement further feature in your web API.
 ## Report
 This examination is a hand-in assignment. You will need to defend your design decisions in writing by answering the below questions in a report. This questions should be answered in your repository *README.md*.
 
-The repost should include the course code, course name, your name and an introduction describing the problem you have tried to solve.
+The report should include the course code, course name, your name and an introduction describing the problem you have tried to solve.
 
 The following questions should be answered in the report.
 1. How have you implemented the idea of HATEOAS in your API? Motivate your choices and how it support the idea of HATEOAS.
@@ -48,6 +49,10 @@ The following questions should be answered in the report.
 4. Explain how your web hook works.
 5. Since this is your first own web API there are probably things you would solve in an other way looking back at this assignment. Write your thoughts down.
 6. Did you do something extra besides the fundamental requirements? Explain them.
+
+## Examination
+The grade for this assignment is F(fail), Fx(fail, with options to complement) and P(pass). We will take note of your effort and give you grades like P-, P or P+ that could affect your final grade on this course. 
+We will look at the structure of the API and the code, how easy your API is to understand, the extent of your effort, and the easiness for the examiner to test your solution.
 
 ## Tips
 * Start by making a plan how to solve the assignment. What do you have to do. What steps do you have to take. What do you need to know and learn? Plan your work! Use GitHUb or a other tool for this.
