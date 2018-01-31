@@ -6,7 +6,7 @@ In this first examination you will produce a essay. Follow this link below to ge
 
 ## Hand-in instructions
 * The essay is preferable written in Swedish
-* The format should be .md (markdown)
+* The format should be pdf or md (markdown)
 * The essay should be published in your examination-01 repository created for you in the course organization on [GitHub](https://github.com/1dv527)
 
 ## Subjects to choose from
