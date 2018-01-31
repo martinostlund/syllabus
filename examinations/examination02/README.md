@@ -15,7 +15,7 @@ We will emit obvious requirements like error handling, security and so on. Of co
 * The API should give some ability to register a web hook which will trigger on some, of you chosen, event.
 * In your examination repository you should provide a [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) collection. The examiner should be able to load this into the POSTMAN application or a [NEWMAN CLI](https://www.getpostman.com/docs/postman/collection_runs/command_line_integration_with_newman) and test your API without any further configuration. For more information about POSTMAN and NEWMAN se this article: https://scotch.io/tutorials/write-api-tests-with-postman-and-newman
 * No visual UI is needed - We want just an API.
-* We recommend writing your API in Node.js, if you choose another platform provide a configured virtual machine (vagrant or docker) or publish your API on a public URL
+* We recommend writing your API in Node.js, if you choose another platform provide a configured virtual machine (vagrant or docker) or publish your API on a public URL (recommended in all cases!)
 * The code should be published in your examination repository along with a report (see below)
 * The code should be individual created, the examiners may run a code anti-plagiarism tool on your code. Plagiarism will be reported.
 * Make a seed-file  that automatically populated your application with some data for testing
