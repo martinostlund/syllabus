@@ -94,7 +94,7 @@
                           * HTTP-based Application Programming Interface
                             * URL requests
                             * JSON, XML, YML, ...
-                          * An interface for data trough an HTTP URL
+                          * An interface for creating and manipulating data trough an HTTP URL
                           
 
                           <aside class="notes">
@@ -174,6 +174,61 @@
 
               </section>
               <section>
+                  <section data-markdown>
+                      <script type="text/template">
+                        ## Context of APIs
+                        * Private, internal
+                        * Partner
+                        * Public
+                      </script>
+                    </section>
+    
+                    <section data-markdown>
+                      <script type="text/template">
+                        ## Web APIs - Pros for service providers
+                          * Platform independence
+                          * SOC, decoupled applications
+                            * Flexibility
+                            * Testing
+                          * Integration, system-to-system (internal and external)
+                          * Transparent, Open Data
+                          * Innovation, Mashups
+                      </script>
+                    </section>
+              
+                    <section data-markdown>
+                      <script type="text/template">
+                        ## Web APIs - Challenges
+                         * Backward compatibility, maintenance for users
+                          * Versioning
+                          * Changeability?
+                         * Security? 
+                          * Authentication (stateless)
+                          * Data leakage
+                         * Performance?
+                      </script>
+                   </section>
+              </section>
+  
+              <section>
+                <section data-markdown class="">
+                        <script type="text/template">
+                          ## Building Web APIs
+                          * Hard to change a published (and used) API
+                          * Define domain semantics
+                            * What are we trying to describe
+                            * Find your "things"/resources/models
+                            * What should not be included in the API
+                          * Choose Architectural style
+                            * URI CRUD-based
+                            * Hypermedia API / ReSTful
+                            * Event-driven
+                              * Web Sockets, Web hooks...
+                              * https://nordicapis.com/5-protocols-for-event-driven-api-architectures/
+                        </script>
+                </section>
+              </section>
+              <section>
 
                 <section data-markdown class="center">
 
@@ -195,6 +250,7 @@
 
                 <section data-markdown class="center">
                   <script type="text/template">
+                        <h2>SOAP</h2>
                         <img width="45%" src="../images/soap_request.png" alt="">
                         <p class="fragment">
                           "RESTful"<br>
@@ -210,66 +266,14 @@
                 
             </section>
 
-            <section>
-                <section data-markdown>
-                    <script type="text/template">
-                      ## Context of APIs
-                      * Private, internal
-                      * Partner
-                      * Public
-                    </script>
-                  </section>
-  
-                  <section data-markdown>
-                    <script type="text/template">
-                      ## Web APIs - Pros for service providers
-                        * Platform independence
-                        * SOC, decoupled applications
-                          * Flexibility
-                          * Testing
-                        * Integration, system-to-system (internal and external)
-                        * Transparent, Open Data
-                        * Innovation, Mashups
-                    </script>
-                  </section>
             
-                  <section data-markdown>
-                    <script type="text/template">
-                      ## Web APIs - Challenges
-                       * Backward compatibility, maintenance for users
-                        * Versioning
-                        * Changeability?
-                       * Security? 
-                        * Authentication (stateless)
-                        * Data leakage
-                       * Performance?
-                    </script>
-                 </section>
-            </section>
-
-            <section>
-              <section data-markdown class="">
-                      <script type="text/template">
-                        ## Building Web APIs
-                        * Hard to change a published (and used) API
-                        * Define domain semantics
-                          * What are we trying to describe
-                          * Find your "things"/resources/models
-                          * What should not be included in the API
-                        * Choose Architectural style
-                          * URI CRUD-based
-                          * Hypermedia API / ReSTful
-                          * Event-driven
-                      </script>
-              </section>
-            </section>
             <section>
               <section data-markdown class="">
                       <script type="text/template">
                         ## ReST
                         Representational State Transfer
 
-                        Roy Fielding
+                        Roy Fielding, Apache HTTP Server, DNT standard, Adobe
 
                         <img src="../images/roy.jpg" width="20%" alt="">
 
@@ -344,9 +348,33 @@
               </section>
 
               <section data-markdown class="">
+                  <script type="text/template">
+                    ## Examples
+
+                    ```
+                    POST http://www.example.com/users
+                    Content-type: application/json
+                    {"name": "John", "username": "thajo", "result": "10"}
+
+                    GET http://www.example.com/users/thajo
+                    Accept: application/json
+
+                    GET http://www.example.com/users
+                    Accept: application/json
+
+                    PUT http://www.example.com/users/thajo
+                    Content-type: application/json
+                    {"name": "John", "username": "thajo", "result": "20"}
+                    ```
+
+                  </script>
+          </section>
+
+              <section data-markdown class="">
                     <script type="text/template">
                       ## HATEOAS
-                      * Hypermedia and application state
+                      * Hypermedia As The Engine Of Application State
+                        * Unique from other network applications architectures 
                       * Browsing the API between states
                         * State machine
 
@@ -356,20 +384,22 @@
               </section>
               <section data-markdown class="">
                   <script type="text/template">
+                    ## Example
+                    ![Yeah](../images/github_ui.png)
+
+                    * Links as state transitions
+                    * Quiz-server - follow the links to the next question, where to send the answer
+                    * Learn from others APIs
+                  </script>
+            </section>
+              <section data-markdown class="">
+                  <script type="text/template">
                     ## Jump to states by clicking links
                     ![State](../images/state.png)
 
                   </script>
             </section>
-              <section data-markdown class="">
-                    <script type="text/template">
-                      ## Example
-                      ![Yeah](../images/github_ui.png)
-
-                      * Quiz-server - follow the links to the next question, where to send the answer
-                      * Learn from others APIs
-                    </script>
-              </section>
+              
               
               <section data-markdown class="">
                     <script type="text/template">
@@ -394,13 +424,13 @@
                       <p class="fragment fade-up">
                         <ul>
                           <li>
-                            No standardized responses
+                            No standardized response?
                             <ul>
-                              <li>You make your own building on your own data model</li>
+                              <li>You make your own data structure on your own data model</li>
                             </ul>
                           </li>
                           <li>
-                            How to send data?
+                              No standardized request?
                             <ul>
                               <li>I must have a documentation for each POST and PUT?</li>
                             </ul>
@@ -435,7 +465,8 @@
               </section>
               <section data-markdown class="">
                     <script type="text/template">
-                      ## HAL - Example
+                      ## HAL - application/hal+json
+
                       <img width="62%" src="../images/HAL.png" alt="">
                     </script>
               </section>
@@ -448,15 +479,16 @@
 
               </section>
               <section>
-                <h2>Other options?</h2>
-                <ul>
-                  <li>BaaS</li>
-                  <li>FaaS</li>
-                  <li>Server-less</li>
-                  <li>DB with APIs (ElasticSearch)</li>
-                </ul>
-              </section>
+                  <div class="center">
+                    <h2>Databases with REST APIs?</h2>
+                    <ul>
+                      <li>RESTful questions instead of SQL?</li>
+                      <li>DaaS</li>
 
+                    </ul>
+                  </div>
+  
+                </section>
             </section>
             <section>
               <section data-markdown class="center">
@@ -471,7 +503,6 @@
                   <script type="text/template">
                       ## Next time
                       * A more pragmatic view
-                        * Maybe some peer-Instruction questions
                         * Web API keys
                         * Web API Security
                         * Tips and tricks
