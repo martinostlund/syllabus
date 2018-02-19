@@ -1,40 +1,41 @@
 ## Projektbeskrivning
 
-I slutet av kursen är tanken att vi ska göra en mindre projektuppgift där ni kommer jobba i grupper. Vi kommer tillhandahåll fyra olika stationer (två distans, två campus) med diverse sensorer/enheter inkopplade. Er uppgift blir att göra om dessa till "Web things" som stödjer sig på den teori och de modeller som tas upp i boken (kap 6 till och med 10).
+I slutet av kursen är tanken att vi ska göra en mindre projektuppgift där ni kommer jobba i grupper. Ni kommer själva få ansvara för hårdvara och projektet ska utmynna i att ni byggt en "web thing" enligt de principer och modeller som tas upp i kurslitteraturen (kap 6 till och med 10). Ni delar in er i grupper två och två. Vill man absolut arbeta enskilt får man.
 
-Ni ska också göra ett enklare gränssnitt där man kan testa funktionaliteten. Det kan bestå av ett eget webbgränssnitt, slackkommandon eller andra typer av webhooks från tjänster. De av er som väljer att köra enskilda projekt på egen hårdvara bör läsa igenom de stationsbeskrivningar som finns för att få en uppfattning om projektets storlek.
+**Innan 27/2 10:00 anmäler ni er grupp (namn och student-id) och en kortare beskrivning av ert projekt** till john.haggerud@lnu.se. Då skapas ett projektrepo åt er där ni kan redovisa er kod med mera.
+
+Ni ska också göra ett enklare gränssnitt där man kan testa funktionaliteten. Det kan bestå av ett eget webbgränssnitt, slackkommandon eller andra typer av webhooks från tjänster. Detta gränsnitt ska finnas tillgängligt för examinatorerna att testa efter projektet genomgång.
 
 ###Examination
 Projektuppgiften bedöms som godkänd eller underkänd.
-
-I samband med slutet av kursen kommer ett individuellt muntligt förhör på kursens innehåll genomföras som leder till ett betyg A-F.
+**I samband med slutet av kursen kommer ett individuellt muntligt förhör på kursens teoretiska innehåll genomföras som leder till ett betyg A-F.**
 
 ###Handledning
-Handledningspass finns inlagda i schemat där vi kommer finnas tillgängliga för frågor. Använd dessa! Då vi nu jobbar med hårdvara som kommer finnas på plats i ny228 kan det bli lite frågor kring detta. De distansgrupper som kopplar upp sig mot dessa stationer och behöver manuellt ändra eller kontrollera något får ta kontakt med oss eller campusstudenter via slack.
+Handledningspass finns inlagda i schemat där vi kommer finnas tillgängliga för frågor. Använd dessa! Ställ frågor i kursens slackkanal. 
 
-### Tänk på
-**Skriv simuleringskod.** Du behöver inte hela tiden skicka upp din kod på hårdvaran. Det går att skriva kod som simulerar “actions” och “properties” för att få en enklare workflow under tiden man jobbar. Integrera sedan in koden i hårdvaran.
 
-Ni som är många i grupp. Dela upp arbetet. Ge ansvar till olika delar och ha sedan möten där ni diskuterar och lär varandra. Det är bra träning inför stora projektkursen som kommer i nästa läsperiod.
 
-## Stationerna
-Nedan följer beskrivningar av de stationer vi tillhandahåller. Ni är fria att själva utforma era “tjänster” utifrån den hårdvara som finns. Distansarna hör av sig om de har några ändringar ni vill göra. Nedan är förslag och vi ger er frihet att omforma och lägga till egna idéer. Varje grupp kommer få en ssh-inloggning till respektive station. Detta konto är med i sudo-gruppen men använd sudo så sällan som möjligt då det är kraftfullt och kan strula till saker om man inte är försiktig.
+## Hårdvara och förslag på "web things"
+Som studenter ansvarar ni själva för hårdvaran. Vårt förslag är att införskaffa en Raspberry Pi som har stöd för att köra någon typ av serverscript-kod. Det finns mängder med olika resurser för hur man konfigurerar sin Raspberry Pi, installerar språket man vill och hur man kopplar sina sensorer. Några tips kan vara:
+https://www.raspberrypi.org/downloads/raspbian/ - Raspbian är det OS vi brukar rekommendera att installera för att kunna köra mjukvara på enheten
+https://github.com/cncjs/cncjs/wiki/Setup-Guide:-Raspberry-Pi-%7C-Install-Node.js-Manually - För er som kör Node.js
 
-## Station A - Photobox - Distansgrupp
+När det kommer till att koppla ihop sensorer och annat med er enhet kan det verkar skrämmande för en ovan. Boken visar några exempel och oftast brukar man hitta kopplingsschema för den sensor man har. Boken visar några exempel på hur man kan koppla ihop och skriva kod mot några sensorer, speciellt i kapitel 4. Många guider, hjälpforum finns att hitta på nätet.
+
+Nedan följer några förslag på "web things" man skulle kunna bygga. Ni är fria att själva utforma era “tjänster” utifrån den hårdvara som ni införskaffar. Nedan är endast förslag och vi ger er frihet att omforma och lägga till egna idéer. Nedan beskrivningar bör dock ge en uppfattning om storleken på projekt. 
+
+## Förslag A - Photobox
 Hårdvara:
 - Raspberry Pi 3 - Model B
-- Raspberry Pi Camera Module (är aktiverad på denna pi)
+- Raspberry Pi Camera Module 
 - PIR Rörelsedektor (GIPO 17)
 - 1 grön LED (GIPO 27)
 - 1 blå LED (GIPO 22)
 - 1 röd LED (GIPO 21)
 
-Förlag: Denna station är tänkt att fungera som en fotolåda som reagerar på rörelser och tar ett foto och på något sätt sparar detta på något smart sätt så att användaren av systemet enkelt kan se de bilder som tagits och när. Stationen kommer finnas i en kartong så när någon öppnar eller kartongen eller rörelsedetektorn på annat blir aktiverad och en bild kan tas med Kameramodulen.
+Förlag: Denna station är tänkt att fungera som en fotolåda som reagerar på rörelser och tar ett foto och på något sätt sparar detta på något smart sätt så att användaren av systemet enkelt kan se de bilder som tagits och när. När rör sig så att rörelsedetektorn blir aktiverad och tas en bild med Kameramodulen som arkiveras på lämpligt sätt.
 
-Stationen kan vara lite svår att hantera från distans men ta gärna hjälp av campusstudenter/lärare i salen för att aktivera rörelsedektorn och på så sätt ta foton.
-
-
-## Station B - Sensorboard - Distans
+## Förslag B - Sensorboard
 Hårdvara:
 - Raspberry Pi 3 - Model B
 - Temperaturmätare/luftfuktighet AM2302 (GIPO 18)
@@ -61,19 +62,8 @@ var TSL2561 = new RaspiSensors.Sensor({
 ```
 
 https://github.com/momenso/node-dht-sensor
-bcm2835 ska vara installerat på enheten
 
-
-## Station C - Bring in the student - Campus
-
-Hårdvara:
-- Raspberry Pi 3 - Model B
-- LCD Display
-- Diverse LEDs
-
-Förlag: När man är på bilprovningen står man med sin bil utanför och tittar på en display där ens registreringsnummer kommer upp när man ska köra in. Vi tänkte oss något liknande för muntliga examinationer på campus. En display där det kommer upp studentens användarnamn och kontor denne ska gå till. Detta skulle man smidigt vilja kunna styra från t.ex. Slack notifieringar.
-
-## Station D - Larmsimulator - Campus
+## Förslag C - Larmsimulator
 Hårdvara:
 - Raspberry Pi 3 - Model B
 - PIR rörelsedetektor
@@ -87,11 +77,22 @@ greenLed GPIO 10
 PIR GPIO 17
 Button GPIO 27
 
-## Redovisning
 
-### Gruppens Redovisning
-Gruppen redovisar kod i det projektrepositorie som tilldelas er. Där ska också finnas en README.md som beskriver projektet.
-Vad din/er "web thing" gör? Hur applikationen/tjänsten fungerar, eventuella installationsguider och beroenden som finns samt en motivering kring hur din/er implementering stödjer sig på teorierna kring web of things. Använd de termer som tas upp i litteraturen så som integration pattern och de olika lagren i arkitekturmodellen.
+### Tänk på
+**Skriv simuleringskod.** Du behöver inte hela tiden ssh:a upp din kod på hårdvaran. Det går att skriva kod som simulerar “actions” och “properties” för att få en enklare workflow under tiden man jobbar. Integrera sedan in koden i hårdvaran. Ni som jobbar i grupp. Dela upp arbetet. 
+
+## Redovisning - Senast 19/3 klockan 08:00
+
+Kod redovisas i det projektrepositorie som tilldelas er. Där ska också finnas en README.md som beskriver projektet.
+* Vad din/er "web thing" gör? 
+* Hur applikationen/tjänsten fungerar - Vi vill kunna ha en adress att besöka, inte installera applikationen lokalt
+* En motivering kring hur din/er implementering stödjer sig på teorierna kring web of things. Använd de termer som tas upp i litteraturen så som integration pattern och de olika lagren i arkitekturmodellen.
 
 ### Den enskilde studentens redovisning.
-Du som arbetat i grupp skriver en personlig reflektion över arbetet. Vad har gått bra och vad har gått dåligt i grupparbetet. Vilka specifika delar har Du implementerat/jobbat med. Här har du möjlighet att uttrycka eventuella delar som du vill lyfta fram endast mellan dig och examinator. Detta skickas via mejl till john.haggerud@lnu.se
+Varje student ska också skriva en personlig reflektion över arbetet. 
+
+* Vad har gått bra och vad har gått dåligt i arbetet. 
+* Vilka specifika delar har Du implementerat/jobbat med (om ni jobbat i grupp).
+
+Här har du möjlighet att uttrycka eventuella delar som du vill lyfta fram endast mellan dig och examinator. 
+**Detta skickas via mejl till john.haggerud@lnu.se senast innan deadline ( 19/3 klockan 08:00)**
