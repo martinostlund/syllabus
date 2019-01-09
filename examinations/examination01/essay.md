@@ -6,52 +6,28 @@ In this first examination you will produce a essay. Follow this link below to ge
 
 ## Hand-in instructions
 * The essay is preferable written in Swedish
-* The format should be pdf or md (markdown)
+* The format should be pdf
 * The essay should be published in your examination-01 repository created for you in the course organization on [GitHub](https://github.com/1dv527)
 
 ## Subjects to choose from
-In this assignment you are pretty free to choose your own subject but we have some restriction about the area. Of course it should have a connection to the web and web science. There will be a couple of categories of subjects to choose from as follow below. We have tried to add some plausible  questions to get you start thinking and working to get a question that interests you. It will guide you into some kind of question to work against
+In this assignment you will get a few subjects to choose from that is connected to the web and web science area. They are the following:
 
+### The web as a platform for discussions
 
-### Big Data through the web - Opportunities and challenges
-* The biggest collective information source in mankind. How to use it to make good?
-* Big data technologies to handle the stream of web data.
-* Is data the new oil?
-* How could algortims come to change our life - for good? For bad?
-* Can algorithms fail when handling big data.
+### AI on the web and the ethics
 
-### Net neutrality
-* Quality of Service - Should some web traffic be prioritized?
-* Is the web for everyone?
-* Is the web many fragmented islands?
-* Censorship or free speech - Can you say what you want on the web? Could it lead to problems?
+### Why digital integration matters...or why not
 
-### Crime on the web
-* Dark side of the web. Is it a problem?
-* How do we implement laws on the web? Should we or is the web something different than "the real world"?
-* Hate crimes vs. the right to be anonymous
-* Will the third world war be on the net? Cyber terror
-
-### Everything/Nothing is free on the web
-* What happens when Facebook is the web for most people - Site silos? Filter bubbles?
-* What could happens when all your information search is driven from Googles search engine algorithm.
-
-### Democracy on the web
-* Open data through the web - How could it help us?
-* Collaboration through the web.
-* Electronic human rights
-* The web and it role in development countries
-* The web as a university - The ability to shape your own knowledge
-
-### Disruptive technologies
-* The Blockchain and trust as software
-* Etherium and smart contracts in relationship to traditional web development
-* Etherium as the worlds first global computer - What to expect?
-* Conversation as a platform / Chat as an interface
+### ...
 
 
 ## Examination
-Your written essay will go through a peer-review done by one of your class mates. This means that you also will get an essay to read and to give a peer-review. **This is also a part of the examination** and you should send your peer-review comments to your class mate (as feedback) and also post your comments to the examiner . The examiner will go through both the peer-reviews and the written essay when grading your assignment. The grade is A to F following the following criteria:
+Your written essay will go through a peer-review done by two of your class mates. This means that you also will get two essays to read and to give a constructive peer-review. **This is also an important part of the examination!** and you should send your peer-review comments to your class mate (as feedback) and also post your comments to the examiner . After you have got your peer-review you have the chance to improve your essay before the final deadline grading.
+
+After the first deadline you will get an email with two other essays that you have to do a peer review on. The email will also include further instructions.
+
+
+The grade is A to F following the following criteria:
 
 A: The student has clearly gaining knowledge of her/his subject. The reflections have a solid reference back to high quality articles. The language in the essay is perfect and the essay is a interesting reading where the student submits her/his own thoughts in a grounded way. The student follow the directions regarding the formal presentation of the essay. The student is giving valuable feedback to it´s peer-review where the student clearly show understanding of it´s peers work.
 
