@@ -24,3 +24,6 @@ Frågeställningar som är intressanta att skriva om är många i detta ämne.
 - Får etiska aspekter stå i vägen för teknisk utveckling eller måste vi fundera över konsekvenser innan tekniken används? Vem ska förresten bestämma vad som är etiskt riktigt?
 - Kommer vi kunna förutse vilka beslut en AI kan göra eller kan det leda till konsekvenser som inte avsågs? 
 - Hur kommer vi se på människan om maskinerna tar över. Kommer människor rationaliseras bort när deras arbete kan ersättas? Kommer vi behöva programmerare i framtiden om vi har AI som kan ta hand om den biten? Kommer detta leda till en massarbetslöshet med all problematik det ger eller är detta bara en upprepning av historien där robotindustrin är ett liknande exempel.
+
+## Blockchain
+...to come
