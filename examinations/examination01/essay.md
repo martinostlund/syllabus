@@ -60,6 +60,14 @@ Frågeställningar som är intressanta att skriva om är många i detta ämne.
 - Kommer vi kunna förutse vilka beslut en AI kan göra eller kan det leda till konsekvenser som inte avsågs? 
 - Hur kommer vi se på människan om maskinerna tar över. Kommer människor rationaliseras bort när deras arbete kan ersättas? Kommer vi behöva programmerare i framtiden om vi har AI som kan ta hand om den biten? Kommer detta leda till en massarbetslöshet med all problematik det ger eller är detta bara en upprepning av historien där robotindustrin är ett liknande exempel.
 
-### Blockchain
-...to come
+### Bitcoin och dess blockkedja
+**Kryptovalutor, miljövidrigt eller demokratiskt?**
+Bitcoin skapades av pseudonymen Satoshi Nakamoto 2008. Det stora problem som löstes i och med detta var det så kallade dubbelspenderingsproblemet. Tidigare versioner av "internetbaserade" värdeöverföringssystem har krävt en central nod som kontrollerar transaktionerna i nätverket. Bitcoin använder sig istället av en blockkedja som är distribuerad på nätverket och som underhålls då noder i nätverket tävlar om att klargöra (clearing) transaktioner genom att lösa energikrävande kryptografiska problem (Proof of work). Kryptovalutor har lovordats för möjligheten det ger de miljarder människor som inte ges tillträde till det vanliga bankväsendet att kunna skicka och ta emot pengar oavsett landsgränser. Samtidigt så riktas kritik mot den möjlighet till anonymisering som kryptovalutor baserade på blockkedjor kan ge och som sägs gynna kriminella nätverk. Vidare ser många entreprenörer nya möjligheter med blockkedjan, bortom de ekonomiska transaktionerna.
+
+Frågeställningar som är intressanta att skriva om i detta ämne:
+
+- Är den höga energikonsumtionen enbart av ondo eller kan det finnas positiva aspekter av detta (demokratiska såväl som miljömässiga) att beakta?
+- Är det en demokratisk rättigheter att kunna förflytta pengar ospårbart (ex. Monero) eller bör alla valutatransaktioner vara spårbara för att försvåra för kriminell verksamhet?
+_ Vad skulle en revolution inom finans kunna innebära, där de som idag inte ges tillträde till den finansiella marknaden plötsligt ges möjlighet till detta?
+- Vilka nya och spännande möjligheter möjliggör bitcoin och blockkedjan förutom de finansiella? 
 
