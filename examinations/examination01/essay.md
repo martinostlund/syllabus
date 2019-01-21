@@ -68,6 +68,6 @@ Frågeställningar som är intressanta att skriva om i detta ämne:
 
 - Är den höga energikonsumtionen enbart av ondo eller kan det finnas positiva aspekter av detta (demokratiska såväl som miljömässiga) att beakta?
 - Är det en demokratisk rättigheter att kunna förflytta pengar ospårbart (ex. Monero) eller bör alla valutatransaktioner vara spårbara för att försvåra för kriminell verksamhet?
-_ Vad skulle en revolution inom finans kunna innebära, där de som idag inte ges tillträde till den finansiella marknaden plötsligt ges möjlighet till detta?
+- Vad skulle en revolution inom finans kunna innebära, där de som idag inte ges tillträde till den finansiella marknaden plötsligt ges möjlighet till detta?
 - Vilka nya och spännande möjligheter möjliggör bitcoin och blockkedjan förutom de finansiella? 
 
