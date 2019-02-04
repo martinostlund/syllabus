@@ -1,27 +1,25 @@
 ## Examination assignment 2
-In this assignment we are going to build a Restful web API. The idea is of course that you will use the theory in this course to build your own API. We encourage you to have your own ideas about the API to build. Maybe you have some kind of application idea you want to start off with an API driven design. For those of you we will present a scenario to follow. That will also give a hint of the extent of this assignment.
+In this assignment we are going to implement a web-API following the theory of REST. We encourage you to have your own ideas about the API service to build. Maybe you have some kind of idea you want to start off with an API driven design? For those of you without any idea we will present a scenario below. That will also give a hint of the extent of this assignment.
 
 ## Overall requirements
 
-We will emit obvious requirements like error handling, security and so on. Of course you will implement that without us telling you to! Below are some requirements for this assignment, either you choose your own implementation or use our suggestion.
+We will emit obvious requirements like error handling, security, good code structure, accessible though HTTP/HTTPS and so on. Of course you will implement that without us telling you to! Below are some requirements for this assignment, either you choose your own implementation or use our suggestion. You are free to choose technical solutions like frameworks and modules for solving tis assignment as long as the examiners could test your solution easy.
 
-* The API should be a web API meaning working through HTTP and/or HTTPS.
-* The API should only support representations with application/json
-* The API should follow the constraints for Restful APIs
-* The API should embrace the idea of HATEOAS as good as possible.
-* The API should be self-descriptive and easy to browse/explore
-* The API should support CRUD operations where all data in the system should be available through API calls.
-* Unsafe HTTP methods and data about users in the system should require some kind of authentication done through the API (you are free to choose implementation method for this).
+* The API should at least support representations with application/json
+* The API should try to follow the constraints for Restful APIs
+* The API should embrace the idea of HATEOAS. The API should have one entry point and use HATEOAS for making the API browsable.
+* The API should give the client possibilities to create, read, update and delete resources.
+* Unsafe HTTP methods and data about users in the system should require authentication done through the API with implementation of JWT-tokens.
 * The API should give some ability to register a web hook which will trigger on some, of you chosen, event.
 * In your examination repository you should provide a [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) collection. The examiner should be able to load this into the POSTMAN application or a [NEWMAN CLI](https://www.getpostman.com/docs/postman/collection_runs/command_line_integration_with_newman) and test your API without any further configuration. For more information about POSTMAN and NEWMAN se this article: https://scotch.io/tutorials/write-api-tests-with-postman-and-newman
-* No visual UI is needed - We want just an API.
-* We recommend writing your API in Node.js, if you choose another platform provide a configured virtual machine (vagrant or docker) or publish your API on a public URL (recommended in all cases!)
+  * Don´t forget to make calls that shows your error handling like bad requests, bad credentials and so on.
 * The code should be published in your examination repository along with a report (see below)
+* Your solution should be testable without any configuration, installations of servers and so on. Preferable will the API be testable through a public URL. Any instructions of how to test your solution should be in your repository README.
 * The code should be individual created, the examiners may run a code anti-plagiarism tool on your code. Plagiarism will be reported.
-* Make a seed-file  that automatically populated your application with some data for testing
+* Make a script-file that automatically populated your application with some data for testing
 
 ## Our suggestion for those without own ideas
-The fishing club "Den svartmunnade smörbultens banne" needs an API for collection fishing reports and wants your help. They are thinking of building a client application but want a separated web API before taking this process along. The idea is that fishermen should be able to report their catch and that this data could be made public. They want data like:
+The fishing club "Den svartmunnade smörbultens banne" needs an API for collection fishing reports. They are thinking of building a client application but want a separated web API before taking this process along. The idea is that fishermen should be able to report their catch and that this data could be made public. They want to collect data like:
 
 * The user which catches the fish
 * The position (longitude and latitude) of the catch
@@ -29,12 +27,9 @@ The fishing club "Den svartmunnade smörbultens banne" needs an API for collecti
 * Weight
 * Length
 * Image-url
-* Timestamp
-* Other information: like equipment, fishing method and so on
-* A text describing the catch
+* Timestamp of the catch
 
-To do un-safe HTTP calls the API must have some kind of Authentication/Authorization. A user should be able to sign in through the API in a safe way. You are free to choose your authentication strategy.
-
+To do un-safe HTTP calls the API must have some kind of Authentication/Authorization. A user should be able to sign in through the API in a safe way (see requirements). 
 Of course you are free to implement further feature in your web API.
 
 ## Report
@@ -43,11 +38,13 @@ This examination is a hand-in assignment. You will need to defend your design de
 The report should include the course code, course name, your name and an introduction describing the problem you have tried to solve.
 
 The following questions should be answered in the report.
-1. How have you implemented the idea of HATEOAS in your API? Motivate your choices and how it support the idea of HATEOAS.
+1. Explain and defend your implementation of HATEOAS in your solution.
 2. If your solution should implement multiple representations of the resources. How would you do it?
-3. Motivate and defend your authentication solution? Why did you choose the one you did? Pros/Cons.
+3. Motivate and defend your authentication solution. 
+  1. What other authentication solutions could you implement?
+  2. What pros/cons do this solution have?
 4. Explain how your web hook works.
-5. Since this is your first own web API there are probably things you would solve in an other way looking back at this assignment. Write your thoughts down.
+5. Since this is your first own web API there are probably things you would solve in an other way looking back at this assignment. Write your down thoughts about this.
 6. Did you do something extra besides the fundamental requirements? Explain them.
 
 ## Examination
@@ -58,3 +55,6 @@ We will look at the structure of the API and the code, how easy your API is to u
 * Start by making a plan how to solve the assignment. What do you have to do. What steps do you have to take. What do you need to know and learn? Plan your work! Use GitHUb or a other tool for this.
 * Start with your resources/models. Create them and write a seed-script that fill your storage with some data to play with when testing your API.
 * Don´t spend time on over-doing validation rules. In a real scenario we should but in this assignment the API is the most important.
+* Maybe a simple client application will help you to develop a good API especially with respect to HATEOAS.
+* Learning and using POSTMAN/Newman is your own responsibility. Make sure to read the article: https://scotch.io/tutorials/write-api-tests-with-postman-and-newman
+
