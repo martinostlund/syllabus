@@ -44,7 +44,7 @@
             <section class="center" data-state="lnu-intro">
                 <h3>The web as an application platform</h3>
                 <h3>(1DV527)</h3>
-                <h1>Web APIs</h1>
+                <h1>ReSTful Web APIs</h1>
                 <div class="lnu-footer">
                     <img src="../images/lnu-logotype.png" />
                     <img src="../images/lnu-symbol.png" />
@@ -83,6 +83,9 @@
                           * Definition
                           * API-driven development
                         * ReSTful Web APIs
+                          * Principles
+                          
+
                       </script>
               </section>
               <section>
@@ -90,11 +93,13 @@
                         <script type="text/template">
                           ## Web API - What do we mean?
 
-                          * Server-side, service interface
+                          
                           * HTTP-based Application Programming Interface
                             * URL requests
-                            * JSON, XML, YML, ...
+                            * Responses in a web friendly data exchange format (JSON, XML, CSV, ...)
                           * An interface for creating and manipulating data trough an HTTP URL
+                          * A server-side service interface
+                            * The client is the consumer!
                           
 
                           <aside class="notes">
@@ -123,7 +128,7 @@
 
                 <section data-markdown class="center">
                         <script type="text/template">
-                          ## Why do I need to write web APIs?
+                          ## Why should I write web APIs?
                          
                         </script>
                 </section>
@@ -185,7 +190,7 @@
     
                     <section data-markdown>
                       <script type="text/template">
-                        ## Web APIs - Pros for service providers
+                        ## Web APIs - The good parts
                           * Platform independence
                           * SOC, decoupled applications
                             * Flexibility
@@ -200,12 +205,14 @@
                       <script type="text/template">
                         ## Web APIs - Challenges
                          * Backward compatibility, maintenance for users
-                          * Versioning
-                          * Changeability?
+                          * Hard to change a published (and used) API
+                            * Versioning
+                            * Changeability?
                          * Security? 
                           * Authentication (stateless)
                           * Data leakage
                          * Performance?
+                          * "Chatty APIs"
                       </script>
                    </section>
               </section>
@@ -214,11 +221,12 @@
                 <section data-markdown class="">
                         <script type="text/template">
                           ## Building Web APIs
-                          * Hard to change a published (and used) API
                           * Define domain semantics
                             * What are we trying to describe
-                            * Find your "things"/resources/models
+                              * What data do the consumers want?
+                              * Find your "things"/resources/models
                             * What should not be included in the API
+                              * Private, sensitive data...
                           * Choose Architectural style
                             * URI CRUD-based
                             * Hypermedia API / ReSTful
@@ -230,7 +238,7 @@
               </section>
               <section>
 
-                <section data-markdown class="center">
+                <section data-markdown class="">
 
                         <script type="text/template">
                           ## History
@@ -274,11 +282,12 @@
                         Representational State Transfer
 
                         Roy Fielding, Apache HTTP Server, DNT standard, Adobe
+                        Architectural Styles and the Design of Network-based Software architectures
 
-                        <img src="../images/roy.jpg" width="20%" alt="">
+                        <img src="../images/roy.jpg" width="15%" alt="">
 
-                        ReST is a networked, hypermedia architectural style - Typified by the web
-                        > ReST demonstrates that the web is an application platform
+                        ReST is a networked, hypermedia architectural style - Typified by the web<!-- .element: class="fragment" -->
+                        ReST demonstrates that the web is an application platform <!-- .element: class="fragment" -->
                       </script>
               </section>
 
@@ -288,16 +297,19 @@
                       <script type="text/template">
                         ## ReST constraints
                         * Client-Server
-                        * Stateless server
-                        * Cacheable
-                        * Layered System
+                          * Independent of each other
+                        * Stateless server <!-- .element: class="fragment" -->
+                          * The client is responsible for managing the state of the application.
+                        * Cacheable <!-- .element: class="fragment" -->
+                        * Layered System <!-- .element: class="fragment" -->
                           * A client don´t know if connected to end-server
-                        * Uniform interface
+                        * Uniform interface <!-- .element: class="fragment" -->
                           * Identification of resources
                           * Manipulations through representations
                           * Self-explaining messages
                           * Hypermedia as the engine of application state (HATEOAS)
-                        * Code-on-demand (optional)
+                        * Code-on-demand (optional) <!-- .element: class="fragment" -->
+                          * return executable code
 
                       </script>
 
@@ -307,26 +319,28 @@
                         ## Identification of resources
                         * ROA (Resource-oriented architecture)
                         * A resource is "a thing"
-                        * URI/URL for identifying a resource
+                          * "Everything is a thing"
+                        * URI/URL for identifying a resource<!-- .element: class="fragment" -->
                             * https://www.example.com/users/
                             * https://www.example.com/users/thajo
                             * https://www.example.com/users/thajo/projects/SOS
                             * http://www.example.com/HGF653/1827Y/TREF6?filter=email,name,city
                             * http://www.example.com/getUser?id=123
-                        * Pretty URLs is nice...just nice.
+                        * Pretty URLs is nice...just nice.<!-- .element: class="fragment" -->
                       </script>
               </section>
               <section data-markdown class="">
                       <script type="text/template">
                         ## Manipulations through representations
                         * An instance of a resource is a representation
-                        * Multiple representation of a resource
+                        * Multiple representation of a resource<!-- .element: class="fragment" -->
                           * application/json, application/xml, text/html
-                        * HTTP have content negotiation
+                        * HTTP have content negotiation<!-- .element: class="fragment" -->
                           * Accept: application/json
                           * Content-Type: text/html
-                        * application/vnd.lnu.thajo-v2+json
+                        * application/vnd.lnu.thajo-v2+json<!-- .element: class="fragment" -->
                           * Custom media-types
+                          * Documented structure
 
                       </script>
               </section>
@@ -340,13 +354,15 @@
                         | Verbs        | Action           | Response Code |
                         | :------------- |:-------------| :-----|
                         | GET     | read-only, safe, idempotent | 200, 404, 500|
-                        | POST     | unsafe, non-idempotent      | 201, 400, 500 |
-                        | PUT | unsafe, idempotent     | 200, 204, 404, 409, 500 |
-                        | DELETE | unsafe, idempotent     | 204, 404, 405, 503 |
+                        | POST     | unsafe, non-idempotent      | 201, 400, 403, 500 |
+                        | PUT | unsafe, idempotent     | 200, 204, 403, 404, 409, 500 |
+                        | PATCH | unsafe, idempotent     | 200, 204, 403, 404, 405, 409, 500 |
+                        | DELETE | unsafe, idempotent     | 204, 403, 404, 405, 503 |
 
                       </script>
               </section>
 
+              
               <section data-markdown class="">
                   <script type="text/template">
                     ## Examples
@@ -356,15 +372,23 @@
                     Content-type: application/json
                     {"name": "John", "username": "thajo", "result": "10"}
 
-                    GET http://www.example.com/users/thajo
-                    Accept: application/json
-
                     GET http://www.example.com/users
                     Accept: application/json
+                    
+                    
+                    GET http://www.example.com/users/thajo
+                    Accept: application/json
+                    
 
-                    PUT http://www.example.com/users/thajo
+                    PUT http://www.example.com/users/123
                     Content-type: application/json
                     {"name": "John", "username": "thajo", "result": "20"}
+
+                    PATCH http://www.example.com/users/123
+                    Content-type: application/json
+                    {"result": "30"}
+
+                    DELETE PATCH http://www.example.com/users/123
                     ```
 
                   </script>
@@ -375,75 +399,90 @@
                       ## HATEOAS
                       * Hypermedia As The Engine Of Application State
                         * Unique from other network applications architectures 
-                      * Browsing the API between states
+                      * Browsing the API between states<!-- .element: class="fragment" -->
                         * State machine
 
-                      “ The name ‘Representational State Transfer’ is intended to evoke an image of how a well-designed Web application behaves: a network of Web pages (a virtual state-machine), where the user progresses through the application by selecting links (state transitions), resulting in the next page (representing the next state of the application) being transferred to the user and rendered for their use.”
+                      “ The name ‘Representational State Transfer’ is intended to evoke an image of how a well-designed Web application behaves: a network of Web pages (a virtual state-machine), where the user progresses through the application by selecting links (state transitions), resulting in the next page (representing the next state of the application) being transferred to the user and rendered for their use.”<!-- .element: class="fragment" -->
 
                     </script>
               </section>
               <section data-markdown class="">
                   <script type="text/template">
-                    ## Example
+                    ### ...nothing new...
                     ![Yeah](../images/github_ui.png)
 
-                    * Links as state transitions
-                    * Quiz-server - follow the links to the next question, where to send the answer
-                    * Learn from others APIs
+                    <img src="../images/githubhtml.png" width="79%">
                   </script>
             </section>
-              <section data-markdown class="">
-                  <script type="text/template">
-                    ## Jump to states by clicking links
-                    ![State](../images/state.png)
+            <section data-markdown class="">
+              <script type="text/template">
+                ## Jump to states by clicking links
+                Virtual state machine 
+                ![State](../images/state.png)
 
-                  </script>
-            </section>
+              </script>
+        </section>
+            <section data-markdown class="">
+              <script type="text/template">
+                ## Example
+                * Links as state transitions
+                    * Quiz-server - follow the links to the next question, where to send the answer <!-- .element: class="fragment" -->
+                
+                    
+                <pre>   <!-- .element: class="fragment" -->
+               
+                GET http://vhost3.lnu.se:20080/question/1
+
+                {
+                  "id":1,"question":"What is 1+1?",
+                  "nextURL":"http://vhost3.lnu.se:20080/answer/1",
+                  "message":"You got your question! Now send me the answer via 
+                             HTTP POST to the nextURL in JSON-format"
+                } 
+              </pre>
+              </script>
+        </section>
+              
               
               
               <section data-markdown class="">
                     <script type="text/template">
-                      ## https://api.github.com/
-                      ![State](../images/gh_links.png)
+                      ## Something to follow...
+                     
+                      * The ReSTful API should only have one entry point
+                        * The server should drive the state
+                        * The client should never concatenate new URLs
+                        * We want to be able to write smart clients!
 
-                      A transferred representation includes links that reflect the state of the application
+                      #### https://api.github.com/ <!-- .element: class="fragment" -->
+                      <img src="../images/gh_links.png" width="60%" /> <!-- .element: class="fragment" -->
                     </script>
               </section>
+              <!--
               <section data-markdown class="">
                     <script type="text/template">
                       ## Only states that make sense!
+
+                      TA BORT?
+
                       <img src="../images/statemashine.png" width="50%" alt="">
 
                       Stolen from: https://speakerdeck.com/stilkov/rest-i-dont-think-it-means-what-you-think-it-does
                     </script>
               </section>
-              <section class="">
+              -->
+              <section data-markdown class="">
 
-                      <img src="../images/problem.gif" alt="">
-
-                      <p class="fragment fade-up">
-                        <ul>
-                          <li>
-                            No standardized response?
-                            <ul>
-                              <li>You make your own data structure on your own data model</li>
-                            </ul>
-                          </li>
-                          <li>
-                              No standardized request?
-                            <ul>
-                              <li>I must have a documentation for each POST and PUT?</li>
-                            </ul>
-                          </li>
-                          <li>
-                            How to handle linking in JSON?
-                            <ul>
-                              <li>XML, HTML, Atom</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </p>
-
+                <script type="text/template">
+                      <img src="../images/problem.gif" width="35%" alt="">
+                      * No standardized response? 
+                        * You make your own data structure on your own data model
+                        * Documentation...is...always correct...and...updated?
+                      * No standardized request? <!-- .element: class="fragment" -->
+                        * I must have a documentation for each POST and PUT?</li>
+                      * How to handle linking in JSON? <!-- .element: class="fragment" -->
+                          * XML, HTML, Atom
+                 </script>
               </section>
               <section data-markdown class="">
                     <script type="text/template">
@@ -470,22 +509,20 @@
                       <img width="62%" src="../images/HAL.png" alt="">
                     </script>
               </section>
-              <section>
+              <section data-markdown class="center">
+
+                <script type="text/template">
                 <div class="center">
-                  <h2>Pragmatic ReST or ReSTafarian?</h2>
+                  ## Pragmatic ReST or ReSTafarian?
 
                   <img width="30%" src="../images/restafarian.jpg" alt="">
                 </div>
-
+              </script>
               </section>
               <section>
                   <div class="center">
-                    <h2>Databases with REST APIs?</h2>
-                    <ul>
-                      <li>RESTful questions instead of SQL?</li>
-                      <li>DaaS</li>
-
-                    </ul>
+                    <h2>GraphQL FTW???</h2>
+                    
                   </div>
   
                 </section>
