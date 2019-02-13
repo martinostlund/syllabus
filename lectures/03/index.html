@@ -136,7 +136,7 @@
                           * HTTP Authentication
                           * Token-based authentication
                           * API keys?
-                          * OAuth, OpenID Connect
+                          * OAuth 2.0 , OpenID Connect
                           * (Kerberos, Public key, WS-Trust, SAML)
 
                           <aside class="notes">
@@ -188,13 +188,13 @@
                 <section data-markdown>
                         <script type="text/template">
                           ## Token-based solutions
-                          <img src="../images/tokenauth.png" width="70%" alt="">
+                          <img src="../images/token_auth.png" style="box-shadow:none;border:0" width="80%" alt="">
 
 
                           * Avoid sending in URL - There are logging proxies out there
                           * Use custom header or **Authorization** header (Bearer)
                           * Time limit
-                          * Avoid resending each time
+                          * Avoid resending username:password each time
                         </script>
                 </section>
 
@@ -240,9 +240,7 @@
                             * Every one can see the info (if not encrypted JSON Web Encryption (JWE))
                               * Protected from manipulation
                             * Could use multiple JWTs
-                            * In cookie?, In Authorization-header (Bearer)?
-                              * CSRF...
-                          
+                         
                         </script>
                 </section>
                 <section data-markdown>
@@ -294,7 +292,7 @@
                       * aud
                         * Audience. Identifies for which this JWT is for
                       * exp
-                        * Expire. Number with specific timestamp as defined by POSIX (sec since 1970-01-01 00:00)
+                        * Expire. Number with specific timestamp as defined by POSIX-UNIX-date (sec since 1970-01-01 00:00)
                       * nbf
                         * Not before. Timestamp from when to be valid
                       * iat
@@ -342,7 +340,7 @@
                           * OAuth is not for Authorization
                           * OAuth is not for Authentication
                           * OAuth is a access delegation framework
-                            * Reduction of sharing credentials with third parties
+                            * Reduction of sharing credentials with third parts
                             * Revoke of access on application level
                             * Scopes
                             * Access token, refresh token
@@ -355,7 +353,7 @@
                   <script type="text/template">
                     ### OAuth 2 - Parts
 
-                    <img src="../images/oauth-clean.png" style="box-shadow:0; border:0" width="45%" alt="">
+                    <img src="../images/oauth-clean.png" style="box-shadow:none; border:0" width="45%" alt="">
                     * Resource Owner - User
                     * Client - Third-part app, using the API on behalf of the user
                     * Resource Server - The API, where users data live
@@ -375,12 +373,11 @@
                         <script type="text/template">
                           ### OpenID Connect
                           * An standardized authentication protocol based on the OAuth 2.0
-                            * "Turns many SHOULD to MUST"
+                            * "Turns many SHOULD into MUST"
                           * Also get a ID Token (JWT) with info about the identity of the end-user
                             * When you want to know more about the user, customize the user experience
-                            * Increase trust
 
-                          <img src="../images/open_connect.png" style="box-shadow:0; border:0" width="65%" alt="">
+                          <img src="../images/open_connect.png" style="box-shadow:none; border:0" width="65%" alt="">
 
                         </script>
                 </section>
