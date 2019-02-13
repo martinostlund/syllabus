@@ -82,11 +82,11 @@
                         ## Content
                         * Web APIs - Security
                           * Attack vectors
-                          * Authentication/Authorization
+                          * Authentication/Authorization for APIs
                             * HTTP-based
                             * Token-based, JWT
-                            * OAuth, Open ID
-                        * Some thing brief about
+                            * OAuth 2, Open ID Connect
+                        * Some about
                           * Rate limit
                           * Filtering/Partial response
                           * Versioning
@@ -99,7 +99,7 @@
                         <script type="text/template">
                           ## Attack vectors - Web APIs
                           * New technology, old threats
-                            * Injections, XSS...be suspicious!
+                            * Injections, XSS, CSRF...be suspicious!
                               * FIEO, Filter input, escape output
                             * JSON Schema (http://json-schema.org/)
                           * HTTPS everywhere!
@@ -108,7 +108,7 @@
                             * Replay attacks
                           * Authentication/Authorization
                             * Protecting resources
-                            * Stateless? Sessions?
+                            * Stateless? Sessions? Patterns?
                           <aside class="notes">
                           </aside>
                         </script>
@@ -150,7 +150,7 @@
 
                           Simple, standard, Supported by most technologies
 
-                          ```
+                          ```javascript
                             // Header from Server - A challenge
                             401 Unauthorized HTTP/1.1
                             WWW-Authenticate: Basic realm="my api"
@@ -337,32 +337,50 @@
                 </section>
                 <section data-markdown>
                         <script type="text/template">
-                          ## OAuth 2
+                          ### OAuth 2
 
-                          OAuth 2.0 is a Access Granting, Delegation framework
-
-                          <img src="../images/oauth-clean.png" width="35%" alt="">
-                          * Resource Owner - User
-                          * Client - Frontend app, using the API on behalf of the user
-                          * Resource Server - The API, where users data live
-                          * Authorization Server - Where users credentials live
+                          * OAuth is not for Authorization
+                          * OAuth is not for Authentication
+                          * OAuth is a access delegation framework
+                            * Reduction of sharing credentials with third parties
+                            * Revoke of access on application level
+                            * Scopes
+                            * Access token, refresh token
+                        
+                          <img src="../images/oauth_scopes.png" width="50%" alt="">
                         </script>
                 </section>
 
                 <section data-markdown>
+                  <script type="text/template">
+                    ### OAuth 2 - Parts
+
+                    <img src="../images/oauth-clean.png" style="box-shadow:0; border:0" width="45%" alt="">
+                    * Resource Owner - User
+                    * Client - Third-part app, using the API on behalf of the user
+                    * Resource Server - The API, where users data live
+                    * Authorization Server - Where users credentials live
+                  </script>
+          </section>
+
+
+                <section data-markdown>
                         <script type="text/template">
-                          ## OAuth 2
-                          <img src="../images/oauth-diagram.png" width="80%" alt="">
+                          ### OAuth 2 - Code flow
+                          <img src="../images/oauth-diagram.png" width="85%" alt="">
 
                         </script>
                 </section>
                 <section data-markdown>
                         <script type="text/template">
-                          ## OpenID Connect
-                          * An standarized authentication protocol based on the OAuth 2.0
+                          ### OpenID Connect
+                          * An standardized authentication protocol based on the OAuth 2.0
+                            * "Turns many SHOULD to MUST"
                           * Also get a ID Token (JWT) with info about the identity of the end-user
-                          * ID Tokens Works with multiple providers, validates the tokens (public key - RSA256)
-                          * See video in resources
+                            * When you want to know more about the user, customize the user experience
+                            * Increase trust
+
+                          <img src="../images/open_connect.png" style="box-shadow:0; border:0" width="65%" alt="">
 
                         </script>
                 </section>
@@ -371,7 +389,7 @@
 
                 <section data-markdown>
                         <script type="text/template">
-                          ## Things to think about
+                          ### Things to think about
                           * Rate limit
                           * Versioning
                           * Partial response
@@ -383,16 +401,17 @@
 
                 <section data-markdown>
                         <script type="text/template">
-                          ## Rate Limit
+                          ### Rate Limit
 
                           Limit the number of request to the API
 
                           * X-RateLimit-Limit - Number of calls during the time slot
                           * X-RateLimit-Remaining - Number of remaining calls
                           * X-RateLimit-Reset - Time when the call counter will be reseted
+                            * Epoch-/POSIX-/UNIXtid
                           * 429 Too Many Requests
 
-                          <img src="../images/ratelimit.png" width="40%" alt="">
+                          <img src="../images/ratelimit.png" width="50%" alt="">
                         </script>
                 </section>
 
@@ -400,7 +419,7 @@
 
                 <section data-markdown>
                         <script type="text/template">
-                          ## Versioning
+                          ### Versioning
 
                           ```
                           GET http://www.api.example.com/v1/products
@@ -420,7 +439,7 @@
 
                 <section data-markdown>
                         <script type="text/template">
-                          ## Filtering/Partial response
+                          ### Filtering/Partial response
                           ```
                           /users/thajo:(firstname,lastname,email)
                           /users/thajo?fields=firstname,lastname,email
@@ -441,7 +460,7 @@
 
                 <section data-markdown>
                         <script type="text/template">
-                          ## Web Hooks
+                          ### Web Hooks
                           * Server-to-server
                           * Publish / Subscribe
 
@@ -449,6 +468,16 @@
 
                         </script>
                 </section>
+
+                <section data-markdown class="center">
+                  <script type="text/template">
+                    ### Tack för idag!
+
+                    <img src="../images/bye03.gif" width="50%" alt="">
+
+                  </script>
+                </section>
+                
 
 
         </div>
