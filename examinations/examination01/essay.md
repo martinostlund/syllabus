@@ -7,7 +7,7 @@ In this first examination you will produce a essay. Follow this link below to ge
 ## Hand-in instructions
 * The essay should be written in Swedish or English
 * The format should be pdf
-* The essay should be send as an e-mail to john.haggerud.LNU@analys.urkund.se ( the essay will go through URKUND to check against plagiarism)
+* The essay should be send as an e-mail to martin.ostlund.LNU@analys.urkund.se ( the essay will go through URKUND to check against plagiarism)
 
 ## Subjects to choose from
 In this assignment you will get a few subjects to choose from that is connected to the web and web science area. Each area can include different framing of a question - Chose to focus on one!
@@ -69,5 +69,5 @@ Frågeställningar som är intressanta att skriva om i detta ämne:
 - Är den höga energikonsumtionen enbart av ondo eller kan det finnas positiva aspekter av detta (demokratiska såväl som miljömässiga) att beakta?
 - Är det en demokratisk rättigheter att kunna förflytta pengar ospårbart (ex. Monero) eller bör alla valutatransaktioner vara spårbara för att försvåra för kriminell verksamhet?
 - Vad skulle en revolution inom finans kunna innebära, där de som idag inte ges tillträde till den finansiella marknaden plötsligt ges möjlighet till detta?
-- Vilka nya och spännande möjligheter möjliggör bitcoin och blockkedjan förutom de finansiella? 
+- Vilka nya och spännande möjligheter möjliggör blockkedjan förutom de finansiella? Blockkedjan är en grundteknik med potential att göra mycket mer än hantera pengar.
 
