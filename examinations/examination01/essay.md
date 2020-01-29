@@ -7,7 +7,7 @@ In this first examination you will produce a essay. Follow this link below to ge
 ## Hand-in instructions
 * The essay should be written in Swedish or English
 * The format should be pdf
-* The essay should be send as an e-mail to john.haggerud.LNU@analys.urkund.se ( the essay will go through URKUND to check against plagiarism)
+* The essay should be submitted via Urkund (plagiarism checking system)
 
 ## Subjects to choose from
 In this assignment you will get a few subjects to choose from that is connected to the web and web science area. Each area can include different framing of a question - Chose to focus on one!
