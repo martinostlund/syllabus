@@ -59,7 +59,8 @@ We will look at the structure of the API and the code, how easy your API is to u
 ### Hand in of the assignment
 
 To hand in the assignment, you should finish a RELEASE.md-file in your project. Make sure you are in the root folder of your examination repository. Add the release-file by doing:
-`wget https://gitlab.lnu.se/1dv527/content/examination-projects/release/raw/master/RELEASE.md`
+
+* `wget https://gitlab.lnu.se/1dv527/content/examination-projects/examination-2-template/raw/master/RELEASE.md`
 
 Edit the file, and make sure you commit it and push it to GitLab.
 
