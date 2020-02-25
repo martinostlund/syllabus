@@ -2,8 +2,6 @@
 
 I slutet av kursen är tanken att vi ska göra en mindre projektuppgift där ni kommer jobba i grupper. Ni kommer själva få ansvara för hårdvara och projektet ska utmynna i att ni byggt en "web thing" **enligt de principer och modeller som tas upp i kurslitteraturen (kap 6 till och med 10)**. Ni delar in er i grupper två och två. Vill man absolut arbeta enskilt får man. Vill man absolut jobba tre och tre får man.
 
-**Innan 3/3 10:00 anmäler ni er grupp (namn och student-id) och en kortare beskrivning av ert projekt** till johan.leitet@lnu.se. Då skapas ett projektrepo åt er där ni kan redovisa er kod med mera.
-
 Ni ska också göra ett enklare gränssnitt där man kan testa funktionaliteten. Det kan bestå av ett eget webbgränssnitt, slackkommandon eller andra typer av webhooks från tjänster. Detta gränsnitt ska finnas tillgängligt för examinatorerna att testa efter projektet genomgång.
 
 ### Examination
@@ -28,7 +26,7 @@ Nedan följer några förslag på "web things" man skulle kunna bygga. Ni är fr
 
 ## Krav
 
-Vi har egentligen inte några speciella krav på er WoT än att API:et den ger använder sig av de modeller och principer som tas upp i litteraturen. Detta gås igenom i kapitlen 6 till 10. Viktigt blir kapitel 8.3 som går igenom "The web thing model" vilken ska implementeras. Det ska således fungerar att koppla en generellt skriven klient mot WoT:ens "entry point" och därefter kunna kommunicera med den enligt denna model.
+Vi har egentligen inte några speciella krav på er WoT än att API:et den ger använder sig av de modeller och principer som tas upp i litteraturen. Detta gås igenom i kapitlen 6 till 10. Viktigt blir kapitel 8.3 som går igenom "The web thing model" vilken *ska* implementeras. Det ska således fungerar att koppla en generellt skriven klient mot WoT:ens "entry point" och därefter kunna kommunicera med den enligt denna model.
 
 ## Förslag A - Photobox
 
@@ -89,7 +87,7 @@ Button GPIO 27
 ### Tänk på
 **Skriv simuleringskod.** Du behöver inte hela tiden ssh:a upp din kod på hårdvaran. Det går att skriva kod som simulerar “actions” och “properties” för att få en enklare workflow under tiden man jobbar. Integrera sedan in koden i hårdvaran. Ni som jobbar i grupp. Dela upp arbetet. 
 
-## Redovisning - Senast 25/3 klockan 08:00
+## Redovisning
 
 Kod redovisas i det projektrepositorie som tilldelas er. Där ska också finnas en README.md som beskriver projektet.
 * Vad din/er "web thing" gör? 
@@ -106,4 +104,3 @@ Varje student ska också skriva en personlig reflektion över arbetet.
 * Vilka specifika delar har Du implementerat/jobbat med (om ni jobbat i grupp).
 
 Här har du möjlighet att uttrycka eventuella delar som du vill lyfta fram endast mellan dig och examinator. 
-**Detta skickas via mejl till john.haggerud@lnu.se senast innan deadline ( 25/3 klockan 08:00)**
