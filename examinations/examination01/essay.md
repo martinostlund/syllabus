@@ -8,10 +8,11 @@ In this first examination you will produce a essay. Follow this link below to ge
 * The essay should be written in Swedish or English
 * The format should be pdf
 * The essay should be submitted via Urkund (plagiarism checking system)
+* The essay submitted for peer review should not contain any identifying information - no name or personal information. (So that the peer review process can be performed anonymously).
 
 ## Subjects to choose from
 In this assignment you will get a few subjects to choose from that is connected to the web and web science area. Each area can include different framing of a question - Chose to focus on one!
-You will found the areas to choose from at the end of this document.
+You will find the areas to choose from at the end of this document.
 
 
 ## Examination
