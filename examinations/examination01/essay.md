@@ -1,35 +1,32 @@
 ## Examination assignment - Writing a essay
 
-In this first examination you will produce a essay. Follow this link below to get a grip of what a essay is and what we expect from you. The text is in Swedish.
+For this examination you will produce a essay. Follow the link below for a description of what an essay is, and what we expect from you (this text is in Swedish).
 
 [Essä](https://github.com/CS-LNU-Learning-Objects/written-essay/blob/master/essay-sv.md)
 
-## Hand-in instructions
+## Submission instructions
 * The essay should be written in Swedish or English
-* The format should be pdf
+* The format for the submitted version should be pdf
 * The essay should be submitted via Urkund (plagiarism checking system)
-* The essay submitted for peer review should not contain any identifying information - no name or personal information. (So that the peer review process can be performed anonymously).
+* The essay submitted for peer review should be stripped of any personal identifying information (no name - so that the peer review process can be performed anonymously). 
 
 ## Subjects to choose from
-In this assignment you will get a few subjects to choose from that is connected to the web and web science area. Each area can include different framing of a question - Chose to focus on one!
-You will find the areas to choose from at the end of this document.
+In this assignment you will be presented with a few subject areas from which to choose - see end of this document.
 
 
 ## Examination
-Your written essay will go through a peer-review done by two of your class mates. This means that **you also will get two essays to read and to give constructive feedback. This is also an important part of the examination!** and you should send your peer-review comments to your class mate (as feedback) and also post your comments to the examiner (through a form). After you have got your peer-review you have the chance to improve your essay before the final deadline grading. After the first deadline you will get an email with two other essays that you have to do a peer review on. **The email will also include further instructions.**
+**Each student will perform two peer reviews on assigned class mates' essays.** This is an important part of the examination! You will have a chance to revise your essay with consideration to the comments you yourself receive before the final version of the essay is submitted. The final grade is based on this final version. The quality of your peer review will also be considered.
 
-The length of the essay should be something about 1500 - 2500 words. But think more of the quality of the text then counting words!
+The grade is A to F. Grading criteria:
 
-The grade is A to F following the following criteria:
+A: The student exhibits excellent knowledge and understanding of the subject area in description and analysis, which are supported by high quality references. The essay is well-structured, easy to follow and is written in correct and precise language. The student presents his/her own thoughts, conjectures and conclusions in a manner that their connection to, and grounding in, referenced work is clear. The student has followed the instructions regarding the formal presentation of the essay and has participated in the peer review process, where he/she has shown excellent ability in understanding and analysing the work of his/her fellow students and provided valuable and actionable constructive feedback.
 
-A: The student has clearly gaining knowledge of her/his subject. The reflections have a solid reference back to high quality articles. The language in the essay is perfect and the essay is a interesting reading where the student submits her/his own thoughts in a grounded way. The student follow the directions regarding the formal presentation of the essay. The student is giving valuable feedback to it´s peer-review where the student clearly show understanding of it´s peers work.
+C: The student exhibits good knowledge and understanding of the subject area in description and analysis, which are supported by fair quality references. The essay is resonably well-structured, easy to follow and is written in correct language. The student presents his/her own thoughts, conjectures and conclusions in a manner that their connection to, and grounding in, referenced work is reasonably clear. The student has followed the instructions regarding the formal presentation of the essay and has participated in the peer review process, where he/she has shown good ability in understanding and analysing the work of his/her fellow students and provided useful constructive feedback.
 
-C: The student show knowledge of her/his subject. The reflections have a solid reference back to articles. The language in the essay is good where the student submits her/his own thoughts in grounded way. The student follow the directions regarding the formal presentation of the essay. The student is giving valuable feedback to it´s peer-review where the student show some understanding of it´s peers work.
+E: The student exhibits some knowledge and a fair understanding of the subject area in description and analysis, of which most is supported by references that are of reasonable quality. The essay may have flaws in its structure and presentation, but its main points and conclusions should be easily discernible and understandable to the reader. The way the student connects his/her own thoughts, conjectures and conclusions to that of referenced materials may contain some omissions and be lacking in depth, but the main lines of reasoning should be grounded in referenced material. The student has followed the instructions regarding the formal presentation of the essay and has participated in the peer review process, where he/she has shown fair ability in understanding and analysing the work of his/her fellow students and provided relevant feedback.
 
-E: The student show some of her/his subject. The reflections have a solid reference back to articles. The language in the essay is tolerable where the student submits her/his own thoughts in grounded way. The student follow the directions regarding the formal presentation of the essay. The student is giving feedback to it´s peer-review where the student show some understanding of it´s peers work.
-
-Fx: The essay is not up to the standards for passing but could be complemented for a grade of E or D.
-F: The essay is not written or not close to passing and the student should redo her/his work
+Fx: The essay does not meet the stated standard for a passing grade, but may be revised up to, but no higher than a grade of E or D.
+F: The essay has been failed, and the student will have to resubmit.
 
 ## Areas (text in Swedish)
 Här följer de ämnen du kan välja att fördjupa dig i.
@@ -37,38 +34,36 @@ Här följer de ämnen du kan välja att fördjupa dig i.
 ### Webben som en kommunikationsplattform
 **Stödjande för en kollektiv intelligens eller en skog av troll**
 
-I begynnelsen av webbens utveckling var visionen att plattformen skulle stödja möjligheten till en rikare och mer öppen kommunikation mellan människor. Idéer kring digitala mötesplatser där idéer och tankar kunde utbytas på ett tillgängligt och transparent sätt. Detta ses som en möjlighet att stärka demokratin och möjligheten att tillsammans lösa globala problem. Det finns också många exempel på detta, där webben fungerat som en plattform där människor arbetat tillsammans för att lösa problem, sprida kunskap och information. Samlingsbegreppet social media växte sig starkt i takt med att webben gick från en plattform där endast ett fåtal kunde publicera till tjänster som bestod av användargenererat innehåll. Webben har skakat om sättet människor tar till sig nyheter och information. Tanken var god men på senare tid har allt fler kritiska synpunkter börjat lyftas fram.
-
-Många forskare och journalister som studerar sättet webben används som kommunikationsplattform höjer ett varningens finger för den utveckling de ser. På senare år har begrepp som "fake news" och "trollfabriker" börjat förekomma.
-Manipulering och förfalskning av nyhetsmaterial och ifrågasättande av tidigare trovärdiga medier förekommer. Några hävdar till och med att det offentliga samtalet har raserat och att webbens stora kommunikationskanaler tycks främja en utveckling där de arga med extremt starka känslor hörs mest. Samtidigt verkar de stora aktörerna inom social media vägra ta ansvar för att deras algoritmer bestämmer nyhetsflödet för miljontals av användare. Skandalen med Cambridge Analytics väckte dock liv i debatten.
-
-Frågeställningar som är intressanta att skriva om är många i detta ämne. 
-
-- Vad gör social media med oss och demokratin? Vilka problem och vilka lösningar finns?
-- Finns det sätt att dämpa det hatfulla och istället uppmuntra produktiva diskussioner?
-- Hos vem ligger ansvaret? Har de stora aktörerna så som Facebook och Google ett ansvar för hur nyheter och innehåll sprids till användarna av deras plattform eller ligger ansvaret på användaren?
+I början av webbens utveckling var visionen att plattformen skulle stödja en rikare och mer öppen kommunikation mellan individer, där idéer och tankar kunde utbytas på ett tillgängligt och transparent sätt. Detta sågs - och ses fortfarande - som en möjlighet för att bidra till att stärka demokrati, för att lösa svåra problem tillsammans, och för att sprida kunskap. Samlingsbegreppet social media har utvecklats i takt och samklang med webben, och har gått från att vara små, isolerade miljöer till något helt annat - något som i väldigt verklig mening dominerar vår samtid. På gott och ont. Tanken med både webb och sociala medier är god, och potentialen likaså, men de har haft en utvecklingsriktning på senare år som det finns anledning att bekymra sig över. Kan man vända de negativa trender som framträtt, eller stödja de positiva krafter som ju också finns i rikliga mängder både på webben och i sociala medier så att de tar överhanden?
 
 
-### Web AI och de etiska aspekterna
+Det finns många intressanta frågeställningar inom detta område - undvik att fokusera enbart på det negativa, utan ta sikte mot en balanserad analys, där fördelar och nackdelar vägs mot varandra. 
+
+- Vad gör social media med oss - som individer och som samhälle? Vilka problem och vilka lösningar finns? Finns det något särskilt problem eller möjlighet som du är nyfiken på att utforska?
+- Vilka nya typ av företeelser och beteenden har webben/sociala medier gett upphov till - och är de nya på riktigt eller en variant på sådant som var mindre synligt, mindre spritt och långsammare utfört tidigare? 
+- Finns det vägar att välja där man kan dämpa det hatfulla och hotfulla för att istället uppmuntra det produktiva och konstruktiva? Hur medverkar man till förståelse, upplysning och konstruktiv dialog; och motverkar fördumning, manipulation, polarisering och polemik?
+- Hos vem landar ansvaret? Är det stora aktörer som Facebook och Google som behöver ta sitt ansvar, eller bör ansvaret ligga på de individer och grupper som postar/läser/tittar/delar/kommenterar, eller är det hos samhället/lagstiftare som ansvaret bör placeras?
+
+### AI och etiska aspekterna
 **Förstår vi när vi tappat kontrollen?**
-Att artificiell intelligens kommer vara en stor teknisk möjlighet och utmaning de kommande åren är alla överens om. Tekniken för självkörande fordon finns redan. AI kommer med all säkerhet påverka fler delar av våra liv. Intresset hos företag i en mängd olika branscher är stort och många ser de möjligheter man har att förbättra och optimera delar av sin verksamhet. Den tekniska möjligheten finns också för gemene man. Där man förut behövde investera stort i hårdvara i form av processorkraft och datalagring kan man nu med några knapptryck (och viss betalning) enkelt använda molntekniker för att fler enklare ska kunna köra kraftfulla AI algoritmer i vilket syfte de än må vara.
+Artificiell intelligens utlovar både stora möjligheter och stora utmaningar. Det är utom tvivel att AI i ökande omfattning och tempo kommer påverka alla delar av våra liv - det arbete vi gör (eller kanske slipper), och hur vi spenderar vår fritid. Hur påverkas vi som människor när vi reduceras till data - och tolkas, bedöms och värderas av algoritmer på uppdrag av säljare, politiker och kanske utländska intressen. Har ett försäkringsbolag rätt att göra en riskbedömning utifrån vårt facebook-flöde, har politiska partier rätt att rikta annonser till oss utifrån vår sökhistorik, har en utländsk makt rätt att styra samhällsopinionen?  
 
-Bidrar tekniken att till större del ge en sannare bild av verkligheten vilket ger ett bättre underlag för att ta rätt beslut även om vi inte kan förstå och analysera utfallet? Hur kommer vi som privatpersoner reagera på när kraftfulla algoritmer analyserar den data vi genererar i vårt dagliga liv och utifrån dessa bedömer oss som människor. Har ett försäkringsbolag rätt att analysera vilka vänner vi har, vilka områden vi bor i och vilka intressen vi verka ha utifrån social media? Allt vi gör på webben registreras och bildar otroliga datamängder som man med "big data-teknik" och AI skulle kunna analysera och skapa profiler utifrån.
+Frågeställningar som är intressanta att skriva om inom detta område: 
 
-Frågeställningar som är intressanta att skriva om är många i detta ämne. 
-
-- Får etiska aspekter stå i vägen för teknisk utveckling eller måste vi fundera över konsekvenser innan tekniken används? Vem ska förresten bestämma vad som är etiskt riktigt?
-- Kommer vi kunna förutse vilka beslut en AI kan göra eller kan det leda till konsekvenser som inte avsågs? 
-- Hur kommer vi se på människan om maskinerna tar över. Kommer människor rationaliseras bort när deras arbete kan ersättas? Kommer vi behöva programmerare i framtiden om vi har AI som kan ta hand om den biten? Kommer detta leda till en massarbetslöshet med all problematik det ger eller är detta bara en upprepning av historien där robotindustrin är ett liknande exempel.
+- Vad är en rimlig balans mellan fördelarna som teknisk utveckling erbjuder och hur den påverkar oss - som individ, grupp och samhälle.  Vad är bra och dåligt, farligt och säkert - och vem bestämmer vad som är bra/dåligt, farligt/säkert? 
+- Hur mycket makt respektive ansvar är vi villiga att släppa ifrån oss till AI-drivna system och deras utvecklare och ägare?
+- Kommer vi kunna förutse vad en frisläppt AI kan göra, eller kan en AI som styr sig själv och sin utvecklingsriktning leda till konsekvenser som vi varken avsåg eller kunnat förutsäga - hur mycket nyttiga och roliga saker som den än producerar på vägen dithän? 
+- Hur kommer vi att betrakta oss själva som människor om/när maskinerna blir bättre på (nästan) allt? Kommer vi välkomna deras hjälp och värdesätta deras överlägsna kompetens, eller kommer vi ta strid för vår rätt att fortsätta att göra saker sämre än vad de kan?
+- Är vi på väg mot en utopi och nya spännande möjligheter för arbete och fritid, eller har vi att se fram emot arbetslöshet och en meningslös tillvara (förutsatt att vår AI overlords ens låter oss leva...)
+- Hur ser framtiden ut för en programmerare - är det ett yrke och företeelse som helt eller delvis kommer att utföras av AI-system. I så fall när - och vilka delar av programmerarens roll och kompetens tror du har kortast respektive längst bäst-före-datum?
 
 ### Bitcoin och dess blockkedja
 **Kryptovalutor, miljövidrigt eller demokratiskt?**
-Bitcoin skapades av pseudonymen Satoshi Nakamoto 2008. Det stora problem som löstes i och med detta var det så kallade dubbelspenderingsproblemet. Tidigare versioner av "internetbaserade" värdeöverföringssystem har krävt en central nod som kontrollerar transaktionerna i nätverket. Bitcoin använder sig istället av en blockkedja som är distribuerad på nätverket och som underhålls då noder i nätverket tävlar om att klargöra (clearing) transaktioner genom att lösa energikrävande kryptografiska problem (Proof of work). Kryptovalutor har lovordats för möjligheten det ger de miljarder människor som inte ges tillträde till det vanliga bankväsendet att kunna skicka och ta emot pengar oavsett landsgränser. Samtidigt så riktas kritik mot den möjlighet till anonymisering som kryptovalutor baserade på blockkedjor kan ge och som sägs gynna kriminella nätverk. Vidare ser många entreprenörer nya möjligheter med blockkedjan, bortom de ekonomiska transaktionerna.
+Bitcoin skapades av någon eller några under pseudonymen Satoshi Nakamoto år 2008. Det stora problem som då adresserades med Bitcoin var det så kallade dubbelspenderingsproblemet. Tidigare versioner av internetbaserade värdeöverföringssystem hade alla utnyttjat någon form av central nod, som alla transaktioner behövde gå igenom. Bitcoin har ingen central nod, utan man använder en distribuerad blockkedja som är fördelad/dubblera över ett nätverk. Varje nod i nätverket tävlar på lika villkor om att få lägga till nästa block - och den som kommer först får bra betalt i form av lite Bitcoin. Kryptovalutor har lovordats för de möjligheter det ger miljarder människor som inte haft tillträde till det traditionella bankväsendet. Det ger också frihet att skicka och ta emot betalmedel utan hänsyn till landsgränser. Samtidigt riktas kritik mot den anonymitet som kryptovalutor ofta erbjuder och som utnyttjas av de mer ljusskygga elementen i samhället. Det finns dock mycket annat som blockkedjor kan användas till förutom kryptovalutor. Det finns t ex intressanta möjligheter kring t ex digitala kontrakt och elektroniska val, där man vill undvika att behöva förlita sig på en central hub, och där man också söker transparens kring gjorda transaktioner.
 
-Frågeställningar som är intressanta att skriva om i detta ämne:
+Frågeställningar som är intressanta att skriva om inom detta ämne:
 
-- Är den höga energikonsumtionen enbart av ondo eller kan det finnas positiva aspekter av detta (demokratiska såväl som miljömässiga) att beakta?
-- Är det en demokratisk rättigheter att kunna förflytta pengar ospårbart (ex. Monero) eller bör alla valutatransaktioner vara spårbara för att försvåra för kriminell verksamhet?
-- Vad skulle en revolution inom finans kunna innebära, där de som idag inte ges tillträde till den finansiella marknaden plötsligt ges möjlighet till detta?
-- Vilka nya och spännande möjligheter möjliggör bitcoin och blockkedjan förutom de finansiella? 
-
+- Är den höga energikonsumtionen som många proof-of-work-baserade system kräver enbart av ondo, eller kan det finnas positiva aspekter av detta (demokratiska såväl som miljömässiga) att beakta?
+- Är det en mänsklig eller kanske demokratisk rättighet att kunna överföra medel på ett sätt som inte går att spåra, eller bör alla transaktioner vara spårbara för att förenkla beskattning och försvåra kriminell verksamhet?
+- På vilket sätt ger kryptovalutor tillgång till personer som befinner sig utanför den traditionella bank- och finansmarknaden, när det gäller saker som lån, finansiering och investering. Hur kan kryptovalutor erbjuda ett alternativ för fattiga och diskrimerade, och andra personer som inte får vara med i den moderna ekonomin?
+- Vilka nya och spännande möjligheter erbjuder blockkedjan bortom kryptovalutor? 
